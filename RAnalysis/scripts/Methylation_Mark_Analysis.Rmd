@@ -7,14 +7,11 @@ output: html_document
 
 ```{r}
 library(tidyverse)
+library(ggsci)
 ```
 
-
-```{r }
-
-
-```
-
+5 methyl cytosine 5mC Quantitifcation
+Kit: Methylflash Methylated DNA quantificiation Kit (Fluorometric) (Reference: P-1035)								https://www.epigentek.com/docs/P-1035.pdf
 
 Relative Quantification: To determine the relative methylation status of two different DNA samples,
 simple calculation for percentage of 5-mC in total DNA can be carried out using the following formula:
@@ -124,7 +121,7 @@ all.species.5mC <- rbind(ahya.27, acyth, aret,  apul)
 unique(all.species.5mC$Stage)
 
 devo.27 <- all.species.5mC %>% 
-  mutate(Stage = fct_relevel(Stage, "Sperm",      "Ovocytes",   "Stage 1 ",   "Stage 2",    
+  mutate(Stage = fct_relevel(Stage, "Sperm",      "Oocytes",   "Stage 1 ",   "Stage 2",    
                              "Stage 3",    "Stage 4",    "Stage 5", "Stage 5.5",    "Stage 6",   "Stage 7",    
                              "Stage 7.5", "Stage 8",    "Stage 9",    "Stage 10",   "Stage 11",   "Stage 12",   
                              "Stage 13",   "Stage 14",  "Stage 15",   "Stage 16",   "Stage 17",   "Stage 17.5"))
@@ -154,3 +151,58 @@ summary_stats.devo.27 %>%
 
 ```
 
+Reduce to commonly sampled timepoints and analyze with ANOVA
+```{r}
+
+devo.27.stages <- devo.27 %>% 
+  filter(!Stage == "Stage 5.5") %>% 
+  filter(!Stage == "Stage 7.5") %>% 
+  filter(!Stage == "Stage 12")%>% 
+  filter(!Stage == "Stage 17")%>% 
+  filter(!Stage == "Stage 17.5")
+
+str(devo.27.stages)
+devo.27.stages$Species <- as.factor(devo.27.stages$Species)
+
+unique(devo.27.stages$Stage)
+
+unique(devo.27.stages$Development)
+
+devo.27.stages <- devo.27.stages %>% 
+  mutate(Development = fct_relevel(Development, "Sperm", "Oocytes", "Fertilized oocyte", "4 cells", "8 cells", "Morula",          "Prawn Chip", "Blastula", "Late Blastula", "Early Bowl", "Bowl", "Blastulation end", "Gastrula", "Early tear drop",
+"Tear drop", "Late tear drop", "Early elongated"))
+
+stage.5mC.res <- aov(log10(rel.percent.5mC) ~ Stage*Species, data= devo.27.stages)
+summary(stage.5mC.res)
+
+Tukey.ph <- TukeyHSD(stage.5mC.res)
+
+summary_stats.devo.27 <- devo.27.stages %>%
+  group_by(Species, Stage, Development) %>%
+  summarize(
+    mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
+    sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
+    .groups = 'drop'
+  )
+
+summary_stats.devo.27 %>%
+  ggplot(aes(x = Development, y = mean_5mC, group = Species, color = Species)) +
+  geom_line(aes(linetype = Species), size = 1) +  # Line connecting mean points
+  geom_point(size = 3) +  # Mean points
+  geom_errorbar(aes(ymin = mean_5mC - sem_5mC, ymax = mean_5mC + sem_5mC), width = 0.2) +  # SEM bars
+  labs(
+    x = "Stage",
+    y = "Mean Relative % of 5mC"
+  ) +
+  scale_color_npg()+
+  scale_fill_npg()+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
+
+
+
+```
+
+DNA Hydroxymethylation 5hmC Quantification
+
+Kit: Methylflash Hydroxymethylated DNA quantificiation Kit (Fluorometric) (Reference: P-1037)									https://www.epigentek.com/docs/P-1037.pdf
