@@ -1,0 +1,156 @@
+---
+title: "Methylation_Mark_Analysis"
+author: "HM Putnam"
+date: "2024-08-26"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r }
+
+
+```
+
+
+Relative Quantification: To determine the relative methylation status of two different DNA samples,
+simple calculation for percentage of 5-mC in total DNA can be carried out using the following formula:
+
+Relative %5mC = ((Sample RFU - MF3 RFU)/ input DNA ng) / ((MF4 RFU - MF3 RFU)x 2 /amount of input positive control (MF4) in ng)
+
+S is the amount of input sample DNA in ng.
+P is the amount of input positive control (MF4) in ng.
+
+Acropora hyacinthus
+```{r}
+ahya <- read.csv("RAnalysis/data/Ahyacinthus_5mC.csv",  na.strings = "NA")
+
+str(ahya)
+as.numeric
+
+stnds <- ahya %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Fluoro.530.590))
+
+ahya <- ahya %>% filter(Species=="A. hyacinthus") 
+
+MF3.RFU.ahya <- stnds$mean.RFU[[1]]
+MF4.RFU.ahya <- stnds$mean.RFU[[2]]
+MF4.ng.ahya <- 10
+
+ahya$rel.percent.5mC <- (((ahya$Fluoro.530.590 -MF3.RFU.ahya )/ ahya$DNA.ng) / ((MF4.RFU.ahya - MF3.RFU.ahya)* 2 /MF4.ng.ahya))*100
+
+ahya.27 <- ahya %>%
+filter(Temperature ==27)
+
+```
+
+Acropora cytherea
+```{r}
+acyth <- read.csv("RAnalysis/data/Acytherea_5mC.csv",  na.strings = "NA")
+
+str(acyth)
+as.numeric
+
+stnds <- acyth %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Fluoro.530.590))
+
+acyth <- acyth %>% filter(Species=="A. cytherea") 
+
+MF3.RFU.acyth <- stnds$mean.RFU[[1]]
+MF4.RFU.acyth <- stnds$mean.RFU[[2]]
+MF4.ng.acyth <- 10
+
+acyth$rel.percent.5mC <- (((acyth$Fluoro.530.590 -MF3.RFU.acyth )/ acyth$DNA.ng) / ((MF4.RFU.acyth - MF3.RFU.acyth)* 2 /MF4.ng.acyth))*100
+
+acyth <- acyth %>%
+filter(Temperature ==27)
+
+```
+Acropora retusa
+```{r}
+aret <- read.csv("RAnalysis/data/Aretusa_5mC.csv",  na.strings = "NA")
+
+str(aret)
+as.numeric
+
+stnds <- aret %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Fluoro.530.590))
+
+aret <- aret %>% filter(Species=="A. retusa") 
+
+MF3.RFU.aret <- stnds$mean.RFU[[1]]
+MF4.RFU.aret <- stnds$mean.RFU[[2]]
+MF4.ng.aret <- 10
+
+aret$rel.percent.5mC <- (((aret$Fluoro.530.590 -MF3.RFU.aret )/ aret$DNA.ng) / ((MF4.RFU.aret - MF3.RFU.aret)* 2 /MF4.ng.aret))*100
+
+aret <- aret %>%
+filter(Temperature ==27) %>%
+filter(!Stage == "Stage 12")
+```
+Acropora pulchra
+```{r}
+apul <- read.csv("RAnalysis/data/Apulchra_5mC.csv",  na.strings = "NA")
+
+str(apul)
+
+stnds <- apul %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Fluoro.530.590))
+
+apul <- apul %>% filter(Species=="A. pulchra") 
+
+MF3.RFU.apul <- stnds$mean.RFU[[1]]
+MF4.RFU.apul <- stnds$mean.RFU[[2]]
+MF4.ng.apul <- 10
+
+apul$rel.percent.5mC <- (((apul$Fluoro.530.590 -MF3.RFU.apul )/ apul$DNA.ng) / ((MF4.RFU.apul - MF3.RFU.apul)* 2 /MF4.ng.apul))*100
+
+apul <- apul %>%
+filter(Temperature ==27)
+
+```
+
+```{r}
+#examine only 27
+
+all.species.5mC <- rbind(ahya.27, acyth, aret,  apul)
+unique(all.species.5mC$Stage)
+
+devo.27 <- all.species.5mC %>% 
+  mutate(Stage = fct_relevel(Stage, "Sperm",      "Ovocytes",   "Stage 1 ",   "Stage 2",    
+                             "Stage 3",    "Stage 4",    "Stage 5", "Stage 5.5",    "Stage 6",   "Stage 7",    
+                             "Stage 7.5", "Stage 8",    "Stage 9",    "Stage 10",   "Stage 11",   "Stage 12",   
+                             "Stage 13",   "Stage 14",  "Stage 15",   "Stage 16",   "Stage 17",   "Stage 17.5"))
+
+summary_stats.devo.27 <- devo.27 %>%
+  group_by(Species, Stage) %>%
+  summarize(
+    mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
+    sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
+    .groups = 'drop'
+  )
+
+summary_stats.devo.27 %>%
+  ggplot(aes(x = Stage, y = mean_5mC, group = Species, color = Species)) +
+  geom_line(aes(linetype = Species), size = 1) +  # Line connecting mean points
+  geom_point(size = 3) +  # Mean points
+  geom_errorbar(aes(ymin = mean_5mC - sem_5mC, ymax = mean_5mC + sem_5mC), width = 0.2) +  # SEM bars
+  labs(
+    x = "Stage",
+    y = "Mean Relative % of 5mC"
+  ) +
+  scale_color_npg()+
+  scale_fill_npg()+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
+
+
+```
+

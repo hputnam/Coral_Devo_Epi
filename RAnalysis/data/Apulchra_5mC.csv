@@ -1,0 +1,76 @@
+﻿Stage,Species,Mark,Temperature,Replicate.Bio,Fluoro.530.590,DNA.ng
+Sperm,A. pulchra,5mC,27,Rep1,335,104
+Sperm,A. pulchra,5mC,27,Rep2,431,128
+Sperm,A. pulchra,5mC,27,Rep3,418,128
+Ovocytes,A. pulchra,5mC,27,Rep1,295,116
+Ovocytes,A. pulchra,5mC,27,Rep2,43,116
+Ovocytes,A. pulchra,5mC,27,Rep3,45,96
+Stage 1 ,A. pulchra,5mC,27,Rep1,44,123
+Stage 1 ,A. pulchra,5mC,27,Rep2,43,115
+Stage 1 ,A. pulchra,5mC,27,Rep3,46,123
+Stage 2,A. pulchra,5mC,27,Rep1,52,112
+Stage 2,A. pulchra,5mC,27,Rep2,114,140
+Stage 2,A. pulchra,5mC,27,Rep3,137,147
+Stage 3,A. pulchra,5mC,27,Rep1,36,100
+Stage 3,A. pulchra,5mC,27,Rep2,80,118
+Stage 3,A. pulchra,5mC,27,Rep3,78,138
+Stage 4,A. pulchra,5mC,27,Rep1,28,52
+Stage 4,A. pulchra,5mC,27,Rep2,40,138
+Stage 4,A. pulchra,5mC,27,Rep3,30,138
+Stage 5,A. pulchra,5mC,27,Rep1,25,117
+Stage 5,A. pulchra,5mC,27,Rep2,22,117
+Stage 5,A. pulchra,5mC,27,Rep3,19,116
+Stage 6,A. pulchra,5mC,27,Rep1,15,108
+Stage 6,A. pulchra,5mC,27,Rep2,14,112
+Stage 6,A. pulchra,5mC,27,Rep3,24,112
+Stage 7,A. pulchra,5mC,27,Rep1,13,120
+Stage 7,A. pulchra,5mC,27,Rep2,13,120
+Stage 7,A. pulchra,5mC,27,Rep3,20,76
+Stage 8,A. pulchra,5mC,27,Rep1,23,52
+Stage 8,A. pulchra,5mC,27,Rep2,19,52
+Stage 8,A. pulchra,5mC,27,Rep3,21,52
+Stage 9,A. pulchra,5mC,27,Rep1,16,52
+Stage 9,A. pulchra,5mC,27,Rep2,18,52
+Stage 9,A. pulchra,5mC,27,Rep3,15,36
+Stage 10,A. pulchra,5mC,27,Rep1,14,128
+Stage 10,A. pulchra,5mC,27,Rep2,12,120
+Stage 10,A. pulchra,5mC,27,Rep3,12,120
+Stage 11,A. pulchra,5mC,27,Rep1,16,112
+Stage 11,A. pulchra,5mC,27,Rep2,17,112
+Stage 11,A. pulchra,5mC,27,Rep3,14,52
+Stage 12,A. pulchra,5mC,27,Rep1,168,64
+Stage 12,A. pulchra,5mC,27,Rep2,12,48
+Stage 12,A. pulchra,5mC,27,Rep3,23,129
+Stage 13,A. pulchra,5mC,27,Rep1,249,114
+Stage 13,A. pulchra,5mC,27,Rep2,246,88
+Stage 13,A. pulchra,5mC,27,Rep3,143,88
+Stage 14,A. pulchra,5mC,27,Rep1,652,146
+Stage 14,A. pulchra,5mC,27,Rep2,621,76
+Stage 14,A. pulchra,5mC,27,Rep3,636,105
+Stage 15,A. pulchra,5mC,27,Rep1,211,118
+Stage 15,A. pulchra,5mC,27,Rep2,201,183
+Stage 15,A. pulchra,5mC,27,Rep3,222,97
+Stage 16,A. pulchra,5mC,27,Rep1,853,138
+Stage 16,A. pulchra,5mC,27,Rep2,793,84
+Stage 16,A. pulchra,5mC,27,Rep3,914,88
+Stage 17,A. pulchra,5mC,27,Rep1,742,108
+Stage 17,A. pulchra,5mC,27,Rep2,1394,164
+Stage 17,A. pulchra,5mC,27,Rep3,968,126
+MF3.RFU,Standard,5mC,NA,Rep1,13,NA
+MF3.RFU,Standard,5mC,NA,Rep2,10,NA
+MF3.RFU,Standard,5mC,NA,Rep3,12,NA
+Std0.5,Standard,5mC,NA,Rep1,748,NA
+Std0.5,Standard,5mC,NA,Rep2,388,NA
+Std0.5,Standard,5mC,NA,Rep3,374,NA
+Std1,Standard,5mC,NA,Rep1,1201,NA
+Std1,Standard,5mC,NA,Rep2,972,NA
+Std1,Standard,5mC,NA,Rep3,819,NA
+Std2,Standard,5mC,NA,Rep1,1639,NA
+Std2,Standard,5mC,NA,Rep2,1257,NA
+Std2,Standard,5mC,NA,Rep3,1265,NA
+Std5,Standard,5mC,NA,Rep1,1638,NA
+Std5,Standard,5mC,NA,Rep2,1722,NA
+Std5,Standard,5mC,NA,Rep3,1669,NA
+MF4.RFU,Standard,5mC,NA,Rep1,1815,NA
+MF4.RFU,Standard,5mC,NA,Rep2,2091,NA
+MF4.RFU,Standard,5mC,NA,Rep3,1954,NA

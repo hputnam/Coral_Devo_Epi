@@ -1,0 +1,73 @@
+﻿Stage,Species,Mark,Temperature,Replicate.Bio,Fluoro.530.590,DNA.ng
+Sperm,A. cytherea,5mC,27,Rep1,553,156
+Sperm,A. cytherea,5mC,27,Rep2,746,114
+Sperm,A. cytherea,5mC,27,Rep3,843,140
+Ovocytes,A. cytherea,5mC,27,Rep1,46,152
+Ovocytes,A. cytherea,5mC,27,Rep2,32,122
+Ovocytes,A. cytherea,5mC,27,Rep3,33,94
+Stage 1 ,A. cytherea,5mC,27,Rep1,89,111
+Stage 1 ,A. cytherea,5mC,27,Rep2,140,99
+Stage 1 ,A. cytherea,5mC,27,Rep3,64,84
+Stage 2,A. cytherea,5mC,27,Rep1,75,100
+Stage 2,A. cytherea,5mC,27,Rep2,60,102
+Stage 2,A. cytherea,5mC,27,Rep3,47,68
+Stage 3,A. cytherea,5mC,27,Rep1,23,98
+Stage 3,A. cytherea,5mC,27,Rep2,45,120
+Stage 3,A. cytherea,5mC,27,Rep3,41,112
+Stage 4,A. cytherea,5mC,27,Rep1,39,150
+Stage 4,A. cytherea,5mC,27,Rep2,17,132
+Stage 4,A. cytherea,5mC,27,Rep3,16,110
+Stage 5,A. cytherea,5mC,27,Rep1,28,44
+Stage 5,A. cytherea,5mC,27,Rep2,74,72
+Stage 5,A. cytherea,5mC,27,Rep3,43,68
+Stage 6,A. cytherea,5mC,27,Rep1,48,60
+Stage 6,A. cytherea,5mC,27,Rep2,43,116
+Stage 6,A. cytherea,5mC,27,Rep3,39,71
+Stage 7,A. cytherea,5mC,27,Rep1,48,120
+Stage 7,A. cytherea,5mC,27,Rep2,66,132
+Stage 7,A. cytherea,5mC,27,Rep3,84,136
+Stage 8,A. cytherea,5mC,27,Rep1,146,118
+Stage 8,A. cytherea,5mC,27,Rep2,123,114
+Stage 8,A. cytherea,5mC,27,Rep3,125,134
+Stage 9,A. cytherea,5mC,27,Rep1,50,120
+Stage 9,A. cytherea,5mC,27,Rep2,45,60
+Stage 9,A. cytherea,5mC,27,Rep3,55,64
+Stage 10,A. cytherea,5mC,27,Rep1,18,40
+Stage 10,A. cytherea,5mC,27,Rep2,27,30
+Stage 10,A. cytherea,5mC,27,Rep3,36,120
+Stage 11,A. cytherea,5mC,27,Rep1,169,124
+Stage 11,A. cytherea,5mC,27,Rep2,175,108
+Stage 11,A. cytherea,5mC,27,Rep3,172,128
+Stage 12,A. cytherea,5mC,27,Rep1,296,102
+Stage 12,A. cytherea,5mC,27,Rep2,164,108
+Stage 12,A. cytherea,5mC,27,Rep3,182,76
+Stage 13,A. cytherea,5mC,27,Rep1,20,95
+Stage 13,A. cytherea,5mC,27,Rep2,19,162
+Stage 13,A. cytherea,5mC,27,Rep3,17,126
+Stage 14,A. cytherea,5mC,27,Rep1,17,114
+Stage 14,A. cytherea,5mC,27,Rep2,16,104
+Stage 14,A. cytherea,5mC,27,Rep3,18,114
+Stage 15,A. cytherea,5mC,27,Rep1,672,112
+Stage 15,A. cytherea,5mC,27,Rep2,697,129
+Stage 15,A. cytherea,5mC,27,Rep3,676,108
+Stage 16,A. cytherea,5mC,27,Rep1,1315,108
+Stage 16,A. cytherea,5mC,27,Rep2,652,48
+Stage 16,A. cytherea,5mC,27,Rep3,1510,108
+MF3.RFU,Standard,5mC,na,Rep1,11,NA
+MF3.RFU,Standard,5mC,na,Rep2,14,NA
+MF3.RFU,Standard,5mC,na,Rep3,12,NA
+Std0.5,Standard,5mC,na,Rep1,506,NA
+Std0.5,Standard,5mC,na,Rep2,465,NA
+Std0.5,Standard,5mC,na,Rep3,551,NA
+Std1,Standard,5mC,na,Rep1,1324,NA
+Std1,Standard,5mC,na,Rep2,1141,NA
+Std1,Standard,5mC,na,Rep3,1436,NA
+Std2,Standard,5mC,na,Rep1,1179,NA
+Std2,Standard,5mC,na,Rep2,1259,NA
+Std2,Standard,5mC,na,Rep3,1484,NA
+Std5,Standard,5mC,na,Rep1,1530,NA
+Std5,Standard,5mC,na,Rep2,1557,NA
+Std5,Standard,5mC,na,Rep3,1559,NA
+MF4.RFU,Standard,5mC,na,Rep1,1615,NA
+MF4.RFU,Standard,5mC,na,Rep2,1558,NA
+MF4.RFU,Standard,5mC,na,Rep3,1517,NA
