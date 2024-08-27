@@ -621,7 +621,7 @@ plot <- all %>%
   geom_errorbar(aes(ymin = mean_5mC - sem_5mC, ymax = mean_5mC + sem_5mC), width = 0.2) +  # SEM bars
   labs(
     x = "Development Stage",
-    y = "Relative % of Mark"
+    y = "Relative % Cytosine Methylation"
   ) +
   scale_color_npg() +
   scale_fill_npg() +
