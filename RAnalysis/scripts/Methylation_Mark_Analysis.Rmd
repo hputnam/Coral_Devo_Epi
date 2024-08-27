@@ -127,7 +127,7 @@ devo.27 <- all.species.5mC %>%
                              "Stage 13",   "Stage 14",  "Stage 15",   "Stage 16",   "Stage 17",   "Stage 17.5"))
 
 summary_stats.devo.27 <- devo.27 %>%
-  group_by(Species, Stage) %>%
+  group_by(Species, Stage, Development, Mark) %>%
   summarize(
     mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
     sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
@@ -181,14 +181,14 @@ plot(stage.5mC.res$residuals, stage.5mC.res$fitted.values)
 Tukey.ph <- TukeyHSD(stage.5mC.res)
 
 summary_stats.devo.27 <- devo.27.stages %>%
-  group_by(Species, Stage, Development) %>%
+  group_by(Species, Stage, Development, Mark) %>%
   summarize(
     mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
     sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
-summary_stats.devo.27 %>%
+Fig1 <- summary_stats.devo.27 %>%
   ggplot(aes(x = Development, y = mean_5mC, group = Species, color = Species)) +
   geom_line(aes(linetype = Species), size = 1) +  # Line connecting mean points
   geom_point(size = 3) +  # Mean points
@@ -329,7 +329,7 @@ devo.5hmC.27 <- all.species.5hmC %>%
                              "Stage 13",   "Stage 14",  "Stage 15",   "Stage 16",   "Stage 17",   "Stage 17.5"))
 
 summary_stats.devo.27.5hmC <- devo.5hmC.27 %>%
-  group_by(Species, Stage) %>%
+  group_by(Species, Stage, Development, Mark) %>%
   summarize(
     mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
     sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
@@ -383,14 +383,14 @@ plot(stage.5hmC.res$residuals, stage.5hmC.res$fitted.values)
 Tukey.ph.5hmC <- TukeyHSD(stage.5hmC.res)
 
 summary_stats.5hmC.27 <- devo.5hmC.27.stages %>%
-  group_by(Species, Stage, Development) %>%
+  group_by(Species, Stage, Development, Mark) %>%
   summarize(
     mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
     sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
-summary_stats.5hmC.27 %>%
+Fig2 <- summary_stats.5hmC.27 %>%
   ggplot(aes(x = Development, y = mean_5mC, group = Species, color = Species)) +
   geom_line(aes(linetype = Species), size = 1) +  # Line connecting mean points
   geom_point(size = 3) +  # Mean points
@@ -405,5 +405,230 @@ summary_stats.5hmC.27 %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
 
 
+
+```
+
+
+DNA 5-Formylcytosine (5-fC) Quantification
+
+Kit: Methylflash 5-Formylcytosine DNA quantificiation Kit (Colorimetric) (Reference: P-1041)									https://www.epigentek.com/docs/P-1041.pdf
+
+Relative Quantification: To determine the relative 5-fC status of two different DNA samples, simple
+calculation for the percentage of 5-fC in your total DNA can be carried out using the following formula: 
+
+Relative %5fC = ((Sample OD - NC OD)/ input DNA ng) / ((PC OD - NC OD) /amount of input positive control (PC) in ng)
+
+S is the amount of input sample DNA in ng.
+P is the amount of input positive control (HF5) in ng.
+
+Acropora hyacinthus 5fC
+```{r}
+ahya.5fC <- read.csv("RAnalysis/data/Ahyacinthus_5fC.csv",  na.strings = "NA")
+
+str(ahya.5fC)
+
+stnds.ahya.5fC <- ahya.5fC %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Abs.450))
+
+ahya.5fC <- ahya.5fC %>% filter(Species=="A. hyacinthus") 
+
+NC.OD.ahya <- stnds.ahya.5fC$mean.RFU[[1]]
+PC.OD.ahya <- stnds.ahya.5fC$mean.RFU[[2]]
+PC.ng.ahya <- 0.2
+
+ahya.5fC$rel.percent.5fC <- (((ahya.5fC$Abs.450 -NC.OD.ahya )/ ahya.5fC$DNA.ng) / ((PC.OD.ahya - NC.OD.ahya)/PC.ng.ahya))*100
+
+ahya.5fC <- ahya.5fC %>%
+filter(Temperature ==27)
+
+```
+
+Acropora cytherea 5fC
+```{r}
+acyth.5fC <- read.csv("RAnalysis/data/Acytherea_5fC.csv",  na.strings = "NA")
+
+str(acyth.5fC)
+
+stnds.acyth.5fC <- acyth.5fC %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Abs.450))
+
+acyth.5fC <- acyth.5fC %>% filter(Species=="A. cytherea") 
+
+NC.OD.acyth <- stnds.acyth.5fC$mean.RFU[[1]]
+PC.OD.acyth <- stnds.acyth.5fC$mean.RFU[[2]]
+PC.ng.acyth <- 0.2
+
+acyth.5fC$rel.percent.5fC <- (((acyth.5fC$Abs.450 -NC.OD.acyth )/ acyth.5fC$DNA.ng) / ((PC.OD.acyth - NC.OD.acyth)/PC.ng.acyth))*100
+
+acyth.5fC <- acyth.5fC %>%
+filter(Temperature ==27)
+
+```
+Acropora pulchra 5fC
+```{r}
+apul.5fC <- read.csv("RAnalysis/data/Apulchra_5fC.csv",  na.strings = "NA")
+
+str(apul.5fC)
+
+stnds.apul.5fC <- apul.5fC %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Abs.450))
+
+apul.5fC <- apul.5fC %>% filter(Species=="A. pulchra") 
+
+NC.OD.apul <- stnds.apul.5fC$mean.RFU[[1]]
+PC.OD.apul <- stnds.apul.5fC$mean.RFU[[2]]
+PC.ng.apul <- 0.2
+
+apul.5fC$rel.percent.5fC <- (((apul.5fC$Abs.450 -NC.OD.apul )/ apul.5fC$DNA.ng) / ((PC.OD.apul - NC.OD.apul)/PC.ng.apul))*100
+
+apul.5fC <- apul.5fC %>%
+filter(Temperature ==27)
+
+```
+
+Acropora retusa 5fC
+```{r}
+aret.5fC <- read.csv("RAnalysis/data/Aretusa_5fC.csv",  na.strings = "NA")
+
+str(aret.5fC)
+
+stnds.aret.5fC <- aret.5fC %>% filter(Species=="Standard") %>%
+  group_by(Stage) %>%
+  summarize(mean.RFU=mean(Abs.450))
+
+aret.5fC <- aret.5fC %>% filter(Species=="A. retusa") 
+
+NC.OD.aret <- stnds.aret.5fC$mean.RFU[[1]]
+PC.OD.aret <- stnds.aret.5fC$mean.RFU[[2]]
+PC.ng.aret <- 0.2
+
+aret.5fC$rel.percent.5fC <- (((aret.5fC$Abs.450 -NC.OD.aret )/ aret.5fC$DNA.ng) / ((PC.OD.aret - NC.OD.aret)/PC.ng.aret))*100
+
+aret.5fC <- aret.5fC %>%
+filter(Temperature ==27)
+
+```
+
+5fC in all species at 27°C
+```{r}
+#examine only 27
+
+all.species.5fC <- rbind(ahya.5fC, acyth.5fC, apul.5fC, aret.5fC)
+unique(all.species.5fC$Stage)
+
+devo.5fC.27 <- all.species.5fC %>% 
+  mutate(Stage = fct_relevel(Stage, "Sperm",      "Oocytes",   "Stage 1 ",   "Stage 2",    
+                             "Stage 3",    "Stage 4",    "Stage 5", "Stage 5.5",    "Stage 6",   "Stage 7",    
+                             "Stage 7.5", "Stage 8",    "Stage 9",    "Stage 10",   "Stage 11",   "Stage 12",   
+                             "Stage 13",   "Stage 14",  "Stage 15",   "Stage 16",   "Stage 17",   "Stage 17.5"))
+
+summary_stats.devo.27.5fC <- devo.5fC.27 %>%
+  group_by(Species, Stage, Development, Mark) %>%
+  summarize(
+    mean_5mC = mean(rel.percent.5fC, na.rm = TRUE),
+    sem_5mC = sd(rel.percent.5fC, na.rm = TRUE) / sqrt(n()),
+    .groups = 'drop'
+  )
+
+summary_stats.devo.27.5fC %>%
+  ggplot(aes(x = Stage, y = mean_5mC, group = Species, color = Species)) +
+  geom_line(aes(linetype = Species), size = 1) +  # Line connecting mean points
+  geom_point(size = 3) +  # Mean points
+  geom_errorbar(aes(ymin = mean_5mC - sem_5mC, ymax = mean_5mC + sem_5mC), width = 0.2) +  # SEM bars
+  labs(
+    x = "Stage",
+    y = "Mean Relative % of 5fC"
+  ) +
+  scale_color_npg()+
+  scale_fill_npg()+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
+
+
+```
+
+Reduce to commonly sampled timepoints and analyze with ANOVA
+```{r}
+
+devo.5fC.27.stages <- devo.5fC.27 %>% 
+  filter(!Stage == "Stage 5.5") %>% 
+  filter(!Stage == "Stage 7.5") %>% 
+  filter(!Stage == "Stage 12")%>% 
+  filter(!Stage == "Stage 17")%>% 
+  filter(!Stage == "Stage 17.5")
+
+str(devo.5fC.27.stages)
+devo.5fC.27.stages$Species <- as.factor(devo.5fC.27.stages$Species)
+
+unique(devo.5fC.27.stages$Stage)
+
+unique(devo.5fC.27.stages$Development)
+
+devo.5fC.27.stages <- devo.5fC.27.stages %>% 
+  mutate(Development = fct_relevel(Development, "Sperm", "Oocytes", "Fertilized oocyte", "4 cells", "8 cells", "Morula",          "Prawn Chip", "Blastula", "Late Blastula", "Early Bowl", "Bowl", "Blastulation end", "Gastrula", "Early tear drop",
+"Tear drop", "Late tear drop", "Early elongated"))
+
+stage.5fC.res <- aov(log10(rel.percent.5fC) ~ Stage*Species, data= devo.5fC.27.stages)
+summary(stage.5fC.res)
+hist(stage.5fC.res$residuals)
+boxplot(stage.5fC.res$residuals)
+plot(stage.5fC.res$residuals, stage.5fC.res$fitted.values)
+
+Tukey.ph.5fC <- TukeyHSD(stage.5fC.res)
+
+summary_stats.5fC.27 <- devo.5fC.27.stages %>%
+  group_by(Species, Stage, Development, Mark) %>%
+  summarize(
+    mean_5mC = mean(rel.percent.5fC, na.rm = TRUE),
+    sem_5mC = sd(rel.percent.5fC, na.rm = TRUE) / sqrt(n()),
+    .groups = 'drop'
+  )
+
+Fig3 <- summary_stats.5fC.27 %>%
+  ggplot(aes(x = Development, y = mean_5mC, group = Species, color = Species)) +
+  geom_line(aes(linetype = Species), size = 1) +  # Line connecting mean points
+  geom_point(size = 3) +  # Mean points
+  geom_errorbar(aes(ymin = mean_5mC - sem_5mC, ymax = mean_5mC + sem_5mC), width = 0.2) +  # SEM bars
+  labs(
+    x = "Stage",
+    y = "Mean Relative % of 5fC"
+  ) +
+  scale_color_npg()+
+  scale_fill_npg()+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
+
+
+
+```
+
+Plot all together
+```{r}
+all <- rbind(summary_stats.devo.27, summary_stats.5hmC.27, summary_stats.5fC.27)
+
+# Reorder the 'Mark' factor
+all <- all %>%
+  mutate(Mark = factor(Mark, levels = c("5mC", "5hmC", "5fC")))
+
+# Create the plot
+plot <- all %>%
+  ggplot(aes(x = Development, y = mean_5mC, group = Species, color = Species)) +
+  geom_line(aes(linetype = Species),linetype = "solid", size = 0.15) +  # Line connecting mean points
+  geom_point(size = 1) +  # Mean points
+  geom_errorbar(aes(ymin = mean_5mC - sem_5mC, ymax = mean_5mC + sem_5mC), width = 0.2) +  # SEM bars
+  labs(
+    x = "Development Stage",
+    y = "Relative % of Mark"
+  ) +
+  scale_color_npg() +
+  scale_fill_npg() +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +  # Rotate x-axis labels for better readability
+  facet_wrap(~ Mark, scales = "free_y", nrow = 3)  # Facet by 'Mark' with free y-axis scales
+
+ggsave("RAnalysis/output/Developmental_DNA_Methylation.pdf", plot = plot, width = 10, height = 6)
 
 ```

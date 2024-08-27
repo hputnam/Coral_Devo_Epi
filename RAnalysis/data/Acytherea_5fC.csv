@@ -1,0 +1,76 @@
+﻿Stage,Development,HPF,Species,Mark,Temperature,Replicate.Bio,Abs.450,DNA.ng
+Sperm,Sperm,0,A. cytherea,5fC,27,Rep1,0.313,234
+Sperm,Sperm,,A. cytherea,5fC,27,Rep2,0.302,228
+Sperm,Sperm,,A. cytherea,5fC,27,Rep3,0.356,210
+Oocytes,Oocytes,,A. cytherea,5fC,27,Rep1,0.3,288
+Oocytes,Oocytes,,A. cytherea,5fC,27,Rep2,0.266,244
+Oocytes,Oocytes,,A. cytherea,5fC,27,Rep3,0.283,216
+Stage 1 ,Fertilized oocyte,,A. cytherea,5fC,27,Rep1,0.28,222
+Stage 1 ,Fertilized oocyte,,A. cytherea,5fC,27,Rep2,0.287,231
+Stage 1 ,Fertilized oocyte,,A. cytherea,5fC,27,Rep3,0.272,168
+Stage 2,4 cells,,A. cytherea,5fC,27,Rep1,0.31,200
+Stage 2,4 cells,,A. cytherea,5fC,27,Rep2,0.291,204
+Stage 2,4 cells,,A. cytherea,5fC,27,Rep3,0.324,136
+Stage 3,8 cells,,A. cytherea,5fC,27,Rep1,0.279,245
+Stage 3,8 cells,,A. cytherea,5fC,27,Rep2,0.316,200
+Stage 3,8 cells,,A. cytherea,5fC,27,Rep3,0.286,224
+Stage 4,Morula,,A. cytherea,5fC,27,Rep1,0.272,225
+Stage 4,Morula,,A. cytherea,5fC,27,Rep2,0.265,198
+Stage 4,Morula,,A. cytherea,5fC,27,Rep3,0.2685,220
+Stage 5,Prawn Chip,,A. cytherea,5fC,27,Rep1,0.307,88
+Stage 5,Prawn Chip,,A. cytherea,5fC,27,Rep2,0.311,144
+Stage 5,Prawn Chip,,A. cytherea,5fC,27,Rep3,0.303,136
+Stage 6,Blastula,,A. cytherea,5fC,27,Rep1,0.292,120
+Stage 6,Blastula,,A. cytherea,5fC,27,Rep2,0.29,203
+Stage 6,Blastula,,A. cytherea,5fC,27,Rep3,0.287,152
+Stage 7,Late Blastula,,A. cytherea,5fC,27,Rep1,0.276,200
+Stage 7,Late Blastula,,A. cytherea,5fC,27,Rep2,0.276,198
+Stage 7,Late Blastula,,A. cytherea,5fC,27,Rep3,0.276,204
+Stage 8,Early Bowl,,A. cytherea,5fC,27,Rep1,0.31,236
+Stage 8,Early Bowl,,A. cytherea,5fC,27,Rep2,0.305,228
+Stage 8,Early Bowl,,A. cytherea,5fC,27,Rep3,0.325,202
+Stage 9,Bowl,,A. cytherea,5fC,27,Rep1,0.303,200
+Stage 9,Bowl,,A. cytherea,5fC,27,Rep2,0.301,120
+Stage 9,Bowl,,A. cytherea,5fC,27,Rep3,0.302,128
+Stage 10,Blastulation end,,A. cytherea,5fC,27,Rep1,0.283,184
+Stage 10,Blastulation end,,A. cytherea,5fC,27,Rep2,0.291,210
+Stage 10,Blastulation end,,A. cytherea,5fC,27,Rep3,0.287,210
+Stage 11,Gastrula,,A. cytherea,5fC,27,Rep1,0.308,217
+Stage 11,Gastrula,,A. cytherea,5fC,27,Rep2,0.338,216
+Stage 11,Gastrula,,A. cytherea,5fC,27,Rep3,0.299,224
+Stage 12,Round stage,,A. cytherea,5fC,27,Rep1,0.29,204
+Stage 12,Round stage,,A. cytherea,5fC,27,Rep2,0.295,216
+Stage 12,Round stage,,A. cytherea,5fC,27,Rep3,0.305,152
+Stage 13,Early tear drop,,A. cytherea,5fC,27,Rep1,0.29,190
+Stage 13,Early tear drop,,A. cytherea,5fC,27,Rep2,0.282,243
+Stage 13,Early tear drop,,A. cytherea,5fC,27,Rep3,0.286,210
+Stage 14,Tear drop,,A. cytherea,5fC,27,Rep1,0.281,208
+Stage 14,Tear drop,,A. cytherea,5fC,27,Rep2,0.281,228
+Stage 14,Tear drop,,A. cytherea,5fC,27,Rep3,0.298,287
+Stage 15,Late tear drop,,A. cytherea,5fC,27,Rep1,0.297,287
+Stage 15,Late tear drop,,A. cytherea,5fC,27,Rep2,0.284,439
+Stage 15,Late tear drop,,A. cytherea,5fC,27,Rep3,0.29,216
+Stage 16,Early elongated,,A. cytherea,5fC,27,Rep1,0.313,216
+Stage 16,Early elongated,,A. cytherea,5fC,27,Rep2,0.293,96
+Stage 16,Early elongated,,A. cytherea,5fC,27,Rep3,0.31,216
+NG,Standard,Standard,Standard,5fC,NA,Rep1,0.253,NA
+NG,Standard,Standard,Standard,5fC,NA,Rep2,0.247,NA
+NG,Standard,Standard,Standard,5fC,NA,Rep3,0.247,NA
+Std10,Standard,Standard,Standard,5fC,NA,Rep1,0.668,NA
+Std10,Standard,Standard,Standard,5fC,NA,Rep2,0.743,NA
+Std10,Standard,Standard,Standard,5fC,NA,Rep3,0.485,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep1,0.901,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep2,0.775,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep3,0.621,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep1,1.336,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep2,1.304,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep3,1,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep1,2.2,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep2,2.022,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep3,1.954,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep1,2.435,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep2,2.424,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep3,2.297,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep1,2.72,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep2,2.812,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep3,2.743,NA

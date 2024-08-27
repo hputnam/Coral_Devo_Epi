@@ -1,0 +1,76 @@
+﻿Stage,Development,HPF,Species,Mark,Temperature,Replicate.Bio,Abs.450,DNA.ng
+Sperm,Sperm,0,A. retusa,5fC,27,Rep1,0.281,294
+Sperm,Sperm,0,A. retusa,5fC,27,Rep2,0.309,311
+Sperm,Sperm,0,A. retusa,5fC,27,Rep3,0.253,286
+Oocytes,Oocytes,0,A. retusa,5fC,27,Rep1,0.287,152
+Oocytes,Oocytes,0,A. retusa,5fC,27,Rep2,0.324,238
+Oocytes,Oocytes,0,A. retusa,5fC,27,Rep3,0.294,300
+Stage 1 ,Fertilized oocyte,,A. retusa,5fC,27,Rep1,0.275,192
+Stage 1 ,Fertilized oocyte,,A. retusa,5fC,27,Rep2,0.311,192
+Stage 1 ,Fertilized oocyte,,A. retusa,5fC,27,Rep3,0.292,136
+Stage 2,4 cells,,A. retusa,5fC,27,Rep1,0.263,232
+Stage 2,4 cells,,A. retusa,5fC,27,Rep2,0.298,264
+Stage 2,4 cells,,A. retusa,5fC,27,Rep3,0.34,160
+Stage 3,8 cells,,A. retusa,5fC,27,Rep1,0.295,136
+Stage 3,8 cells,,A. retusa,5fC,27,Rep2,0.279,128
+Stage 3,8 cells,,A. retusa,5fC,27,Rep3,0.287,96
+Stage 4,Morula,,A. retusa,5fC,27,Rep1,0.274,120
+Stage 4,Morula,,A. retusa,5fC,27,Rep2,0.277,80
+Stage 4,Morula,,A. retusa,5fC,27,Rep3,0.271,160
+Stage 5,Prawn Chip,,A. retusa,5fC,27,Rep1,0.253,96
+Stage 5,Prawn Chip,,A. retusa,5fC,27,Rep2,0.275,120
+Stage 5,Prawn Chip,,A. retusa,5fC,27,Rep3,0.264,80
+Stage 6,Blastula,,A. retusa,5fC,27,Rep1,0.278,88
+Stage 6,Blastula,,A. retusa,5fC,27,Rep2,0.328,128
+Stage 6,Blastula,,A. retusa,5fC,27,Rep3,0.311,80
+Stage 7,Late Blastula,,A. retusa,5fC,27,Rep1,0.273,400
+Stage 7,Late Blastula,,A. retusa,5fC,27,Rep2,0.292,504
+Stage 7,Late Blastula,,A. retusa,5fC,27,Rep3,0.276,240
+Stage 8,Early Bowl,,A. retusa,5fC,27,Rep1,0.269,244
+Stage 8,Early Bowl,,A. retusa,5fC,27,Rep2,0.256,224
+Stage 8,Early Bowl,,A. retusa,5fC,27,Rep3,0.25,205
+Stage 9,Bowl,,A. retusa,5fC,27,Rep1,0.275,136
+Stage 9,Bowl,,A. retusa,5fC,27,Rep2,0.295,152
+Stage 9,Bowl,,A. retusa,5fC,27,Rep3,0.285,200
+Stage 10,Blastulation end,,A. retusa,5fC,27,Rep1,0.275,216
+Stage 10,Blastulation end,,A. retusa,5fC,27,Rep2,0.3,200
+Stage 10,Blastulation end,,A. retusa,5fC,27,Rep3,0.281,228
+Stage 11,Gastrula,,A. retusa,5fC,27,Rep1,0.275,200
+Stage 11,Gastrula,,A. retusa,5fC,27,Rep2,0.306,210
+Stage 11,Gastrula,,A. retusa,5fC,27,Rep3,0.261,215
+Stage 12,Round stage,,A. retusa,5fC,27,Rep1,0.322,198
+Stage 12,Round stage,,A. retusa,5fC,27,Rep2,0.284,110
+Stage 12,Round stage,,A. retusa,5fC,27,Rep3,0.275,204
+Stage 13,Early tear drop,,A. retusa,5fC,27,Rep1,0.298,196
+Stage 13,Early tear drop,,A. retusa,5fC,27,Rep2,0.279,196
+Stage 13,Early tear drop,,A. retusa,5fC,27,Rep3,0.284,168
+Stage 14,Tear drop,,A. retusa,5fC,27,Rep1,0.286,128
+Stage 14,Tear drop,,A. retusa,5fC,27,Rep2,0.292,176
+Stage 14,Tear drop,,A. retusa,5fC,27,Rep3,0.303,208
+Stage 15,Late tear drop,,A. retusa,5fC,27,Rep1,0.302,160
+Stage 15,Late tear drop,,A. retusa,5fC,27,Rep2,0.29,104
+Stage 15,Late tear drop,,A. retusa,5fC,27,Rep3,0.296,112
+Stage 16,Early elongated,,A. retusa,5fC,27,Rep1,0.37,270
+Stage 16,Early elongated,,A. retusa,5fC,27,Rep2,0.262,100
+Stage 16,Early elongated,,A. retusa,5fC,27,Rep3,0.316,249
+NG,Standard,Standard,Standard,5fC,NA,Rep1,0.245,NA
+NG,Standard,Standard,Standard,5fC,NA,Rep2,0.247,NA
+NG,Standard,Standard,Standard,5fC,NA,Rep3,0.247,NA
+Std10,Standard,Standard,Standard,5fC,NA,Rep1,0.455,NA
+Std10,Standard,Standard,Standard,5fC,NA,Rep2,0.378,NA
+Std10,Standard,Standard,Standard,5fC,NA,Rep3,0.414,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep1,0.807,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep2,0.706,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep3,0.814,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep1,1.386,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep2,1.342,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep3,1.227,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep1,1.988,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep2,1.804,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep3,2.312,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep1,2.365,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep2,2.184,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep3,1.74,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep1,3.067,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep2,3.08,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep3,3.133,NA

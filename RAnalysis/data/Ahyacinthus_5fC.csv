@@ -1,0 +1,115 @@
+﻿Stage,Development,HPF,Species,Mark,Temperature,Replicate.Bio,Abs.450,DNA.ng
+Sperm,Sperm,0,A. hyacinthus,5fC,27,Rep1,0.272,300
+Sperm,Sperm,0,A. hyacinthus,5fC,27,Rep2,0.276,300
+Sperm,Sperm,0,A. hyacinthus,5fC,27,Rep3,0.278,300
+Oocytes,Oocytes,0,A. hyacinthus,5fC,27,Rep1,0.274,300
+Oocytes,Oocytes,0,A. hyacinthus,5fC,27,Rep2,0.276,300
+Oocytes,Oocytes,0,A. hyacinthus,5fC,27,Rep3,0.279,300
+Stage 1 ,Fertilized oocyte,,A. hyacinthus,5fC,27,Rep1,0.273,152
+Stage 1 ,Fertilized oocyte,,A. hyacinthus,5fC,27,Rep2,0.276,264
+Stage 1 ,Fertilized oocyte,,A. hyacinthus,5fC,27,Rep3,0.279,264
+Stage 2,4 cells,,A. hyacinthus,5fC,27,Rep1,0.279,144
+Stage 2,4 cells,,A. hyacinthus,5fC,27,Rep2,0.276,184
+Stage 2,4 cells,,A. hyacinthus,5fC,27,Rep3,0.281,300
+Stage 3,8 cells,,A. hyacinthus,5fC,27,Rep1,0.271,192
+Stage 3,8 cells,,A. hyacinthus,5fC,27,Rep2,0.274,104
+Stage 3,8 cells,,A. hyacinthus,5fC,27,Rep3,0.284,112
+Stage 4,Morula,,A. hyacinthus,5fC,27,Rep1,0.273,168
+Stage 4,Morula,,A. hyacinthus,5fC,27,Rep2,0.277,112
+Stage 4,Morula,,A. hyacinthus,5fC,27,Rep3,0.277,176
+Stage 5,Prawn Chip,,A. hyacinthus,5fC,27,Rep1,0.290,264
+Stage 5,Prawn Chip,,A. hyacinthus,5fC,27,Rep2,0.278,144
+Stage 5,Prawn Chip,,A. hyacinthus,5fC,27,Rep3,0.289,184
+Stage 6,Blastula,,A. hyacinthus,5fC,27,Rep1,0.278,100
+Stage 6,Blastula,,A. hyacinthus,5fC,27,Rep2,0.282,104
+Stage 6,Blastula,,A. hyacinthus,5fC,27,Rep3,0.284,100
+Stage 7,Late Blastula,,A. hyacinthus,5fC,27,Rep1,0.277,100
+Stage 7,Late Blastula,,A. hyacinthus,5fC,27,Rep2,0.272,114
+Stage 7,Late Blastula,,A. hyacinthus,5fC,27,Rep3,0.287,100
+Stage 8,Early Bowl,,A. hyacinthus,5fC,27,Rep1,0.277,114
+Stage 8,Early Bowl,,A. hyacinthus,5fC,27,Rep2,0.276,114
+Stage 8,Early Bowl,,A. hyacinthus,5fC,27,Rep3,0.274,100
+Stage 9,Bowl,,A. hyacinthus,5fC,27,Rep1,0.272,300
+Stage 9,Bowl,,A. hyacinthus,5fC,27,Rep2,0.286,208
+Stage 9,Bowl,,A. hyacinthus,5fC,27,Rep3,0.273,300
+Stage 10,Blastulation end,,A. hyacinthus,5fC,27,Rep1,0.270,216
+Stage 10,Blastulation end,,A. hyacinthus,5fC,27,Rep2,0.276,300
+Stage 10,Blastulation end,,A. hyacinthus,5fC,27,Rep3,0.275,300
+Stage 11,Gastrula,,A. hyacinthus,5fC,27,Rep1,0.274,300
+Stage 11,Gastrula,,A. hyacinthus,5fC,27,Rep2,0.275,300
+Stage 11,Gastrula,,A. hyacinthus,5fC,27,Rep3,0.278,300
+Stage 12,Round stage,,A. hyacinthus,5fC,27,Rep1,0.279,300
+Stage 12,Round stage,,A. hyacinthus,5fC,27,Rep2,0.286,300
+Stage 12,Round stage,,A. hyacinthus,5fC,27,Rep3,0.281,300
+Stage 13,Early tear drop,,A. hyacinthus,5fC,27,Rep1,0.286,300
+Stage 13,Early tear drop,,A. hyacinthus,5fC,27,Rep2,0.275,300
+Stage 13,Early tear drop,,A. hyacinthus,5fC,27,Rep3,0.278,300
+Stage 14,Tear drop,,A. hyacinthus,5fC,27,Rep1,0.267,120
+Stage 14,Tear drop,,A. hyacinthus,5fC,27,Rep2,0.280,240
+Stage 14,Tear drop,,A. hyacinthus,5fC,27,Rep3,0.279,300
+Stage 15,Late tear drop,,A. hyacinthus,5fC,27,Rep1,0.283,300
+Stage 15,Late tear drop,,A. hyacinthus,5fC,27,Rep2,0.284,300
+Stage 15,Late tear drop,,A. hyacinthus,5fC,27,Rep3,0.287,272
+Stage 16,Early elongated,,A. hyacinthus,5fC,27,Rep1,0.285,300
+Stage 16,Early elongated,,A. hyacinthus,5fC,27,Rep2,0.278,160
+Stage 16,Early elongated,,A. hyacinthus,5fC,27,Rep3,0.278,152
+Stage 17,Swimming larvae,,A. hyacinthus,5fC,27,Rep1,0.280,248
+Stage 17,Swimming larvae,,A. hyacinthus,5fC,27,Rep2,0.274,300
+Stage 17,Swimming larvae,,A. hyacinthus,5fC,27,Rep3,0.279,300
+Stage 17.5,Swimming larvae older,,A. hyacinthus,5fC,27,Rep1,0.278,264
+Stage 17.5,Swimming larvae older,,A. hyacinthus,5fC,27,Rep2,0.283,300
+Stage 17.5,Swimming larvae older,,A. hyacinthus,5fC,27,Rep3,0.283,264
+Stage 1 ,Fertilized oocyte,,A. hyacinthus,5fC,30,Rep1,0.306,160
+Stage 1 ,Fertilized oocyte,,A. hyacinthus,5fC,30,Rep2,0.310,224
+Stage 1 ,Fertilized oocyte,,A. hyacinthus,5fC,30,Rep3,0.289,224
+Stage 2,4 cells,,A. hyacinthus,5fC,30,Rep1,0.275,64
+Stage 2,4 cells,,A. hyacinthus,5fC,30,Rep2,0.292,120
+Stage 2,4 cells,,A. hyacinthus,5fC,30,Rep3,0.284,64
+Stage 3,8 cells,,A. hyacinthus,5fC,30,Rep1,0.274,234
+Stage 3,8 cells,,A. hyacinthus,5fC,30,Rep2,0.255,184
+Stage 3,8 cells,,A. hyacinthus,5fC,30,Rep3,0.264,210
+Stage 4,Morula,,A. hyacinthus,5fC,30,Rep1,0.280,96
+Stage 4,Morula,,A. hyacinthus,5fC,30,Rep2,0.276,112
+Stage 4,Morula,,A. hyacinthus,5fC,30,Rep3,0.280,96
+Stage 5,Prawn Chip,,A. hyacinthus,5fC,30,Rep1,0.350,222
+Stage 5,Prawn Chip,,A. hyacinthus,5fC,30,Rep2,0.376,208
+Stage 5,Prawn Chip,,A. hyacinthus,5fC,30,Rep3,0.306,160
+Stage 6,Blastula,,A. hyacinthus,5fC,30,Rep1,0.276,136
+Stage 6,Blastula,,A. hyacinthus,5fC,30,Rep2,0.274,64
+Stage 6,Blastula,,A. hyacinthus,5fC,30,Rep3,0.278,96
+Stage 7,Late Blastula,,A. hyacinthus,5fC,30,Rep1,0.278,160
+Stage 7,Late Blastula,,A. hyacinthus,5fC,30,Rep2,0.295,168
+Stage 7,Late Blastula,,A. hyacinthus,5fC,30,Rep3,0.286,184
+Stage 8,Early Bowl,,A. hyacinthus,5fC,30,Rep1,0.300,152
+Stage 8,Early Bowl,,A. hyacinthus,5fC,30,Rep2,0.295,144
+Stage 8,Early Bowl,,A. hyacinthus,5fC,30,Rep3,0.287,96
+Stage 9,Bowl,,A. hyacinthus,5fC,30,Rep1,0.270,64
+Stage 9,Bowl,,A. hyacinthus,5fC,30,Rep2,0.280,136
+Stage 9,Bowl,,A. hyacinthus,5fC,30,Rep3,0.285,96
+Stage 10,Blastulation end,,A. hyacinthus,5fC,30,Rep1,0.297,176
+Stage 10,Blastulation end,,A. hyacinthus,5fC,30,Rep2,0.297,128
+Stage 10,Blastulation end,,A. hyacinthus,5fC,30,Rep3,0.297,120
+Stage 11,Gastrula,,A. hyacinthus,5fC,30,Rep1,0.293,176
+Stage 11,Gastrula,,A. hyacinthus,5fC,30,Rep2,0.298,128
+Stage 11,Gastrula,,A. hyacinthus,5fC,30,Rep3,0.295,120
+Stage 12,Round stage,,A. hyacinthus,5fC,30,Rep1,0.276,136
+Stage 12,Round stage,,A. hyacinthus,5fC,30,Rep2,0.283,72
+Stage 12,Round stage,,A. hyacinthus,5fC,30,Rep3,0.279,80
+NG,Standard,Standard,Standard,5fC,NA,Rep1,0.245,NA
+NG,Standard,Standard,Standard,5fC,NA,Rep2,0.247,NA
+NG,Standard,Standard,Standard,5fC,NA,Rep3,0.247,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep1,0.668,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep2,0.743,NA
+Std20,Standard,Standard,Standard,5fC,NA,Rep3,0.485,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep1,0.901,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep2,0.775,NA
+Std40,Standard,Standard,Standard,5fC,NA,Rep3,0.621,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep1,1.336,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep2,1.304,NA
+Std100,Standard,Standard,Standard,5fC,NA,Rep3,1.000,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep1,2.200,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep2,2.022,NA
+PC,Standard,Standard,Standard,5fC,NA,Rep3,1.954,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep1,2.435,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep2,2.424,NA
+Std400,Standard,Standard,Standard,5fC,NA,Rep3,2.297,NA
