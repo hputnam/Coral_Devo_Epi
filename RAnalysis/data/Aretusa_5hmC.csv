@@ -1,0 +1,103 @@
+﻿Stage,Development,HPF,Species,Mark,Temperature,Replicate.Bio,Fluoro.530.590,DNA.ng
+Sperm,Sperm,0,A. retusa,5hmC,27,Rep1,26,116
+Sperm,Sperm,0,A. retusa,5hmC,27,Rep2,18,124
+Sperm,Sperm,0,A. retusa,5hmC,27,Rep3,35,143
+Sperm,Sperm,0,A. retusa,5hmC,27,Rep4,28,143
+Oocytes,Oocytes,0,A. retusa,5hmC,27,Rep1,13,76
+Oocytes,Oocytes,0,A. retusa,5hmC,27,Rep2,28,102
+Oocytes,Oocytes,0,A. retusa,5hmC,27,Rep3,14,100
+Oocytes,Oocytes,0,A. retusa,5hmC,27,Rep4,13,100
+Stage 1 ,Fertilized oocyte,,A. retusa,5hmC,27,Rep1,23,96
+Stage 1 ,Fertilized oocyte,,A. retusa,5hmC,27,Rep2,15,96
+Stage 1 ,Fertilized oocyte,,A. retusa,5hmC,27,Rep3,23,96
+Stage 1 ,Fertilized oocyte,,A. retusa,5hmC,27,Rep4,24,68
+Stage 2,4 cells,,A. retusa,5hmC,27,Rep1,21,116
+Stage 2,4 cells,,A. retusa,5hmC,27,Rep2,29,132
+Stage 2,4 cells,,A. retusa,5hmC,27,Rep3,18,132
+Stage 2,4 cells,,A. retusa,5hmC,27,Rep4,19,80
+Stage 3,8 cells,,A. retusa,5hmC,27,Rep1,21,68
+Stage 3,8 cells,,A. retusa,5hmC,27,Rep2,22,64
+Stage 3,8 cells,,A. retusa,5hmC,27,Rep3,26,40
+Stage 3,8 cells,,A. retusa,5hmC,27,Rep4,27,68
+Stage 4,Morula,,A. retusa,5hmC,27,Rep1,18,60
+Stage 4,Morula,,A. retusa,5hmC,27,Rep2,16,40
+Stage 4,Morula,,A. retusa,5hmC,27,Rep3,13,80
+Stage 4,Morula,,A. retusa,5hmC,27,Rep4,17,80
+Stage 5,Prawn Chip,,A. retusa,5hmC,27,Rep1,19,48
+Stage 5,Prawn Chip,,A. retusa,5hmC,27,Rep2,16,60
+Stage 5,Prawn Chip,,A. retusa,5hmC,27,Rep3,25,60
+Stage 5,Prawn Chip,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 5.5,Late Prawn Chip,,A. retusa,5hmC,27,Rep1,30,28
+Stage 5.5,Late Prawn Chip,,A. retusa,5hmC,27,Rep2,14,28
+Stage 5.5,Late Prawn Chip,,A. retusa,5hmC,27,Rep3,15,56
+Stage 5.5,Late Prawn Chip,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 6,Blastula,,A. retusa,5hmC,27,Rep1,25,44
+Stage 6,Blastula,,A. retusa,5hmC,27,Rep2,40,64
+Stage 6,Blastula,,A. retusa,5hmC,27,Rep3,31,64
+Stage 6,Blastula,,A. retusa,5hmC,27,Rep4,110,40
+Stage 7,Late Blastula,,A. retusa,5hmC,27,Rep1,26,100
+Stage 7,Late Blastula,,A. retusa,5hmC,27,Rep2,27,126
+Stage 7,Late Blastula,,A. retusa,5hmC,27,Rep3,26,126
+Stage 7,Late Blastula,,A. retusa,5hmC,27,Rep4,29,120
+Stage 7.5,Later Blastula,,A. retusa,5hmC,27,Rep1,34,112
+Stage 7.5,Later Blastula,,A. retusa,5hmC,27,Rep2,27,132
+Stage 7.5,Later Blastula,,A. retusa,5hmC,27,Rep3,53,80
+Stage 7.5,Later Blastula,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 8,Early Bowl,,A. retusa,5hmC,27,Rep1,17,122
+Stage 8,Early Bowl,,A. retusa,5hmC,27,Rep2,18,112
+Stage 8,Early Bowl,,A. retusa,5hmC,27,Rep3,23,123
+Stage 8,Early Bowl,,A. retusa,5hmC,27,Rep4,37,123
+Stage 9,Bowl,,A. retusa,5hmC,27,Rep1,151,68
+Stage 9,Bowl,,A. retusa,5hmC,27,Rep2,47,76
+Stage 9,Bowl,,A. retusa,5hmC,27,Rep3,23,100
+Stage 9,Bowl,,A. retusa,5hmC,27,Rep4,21,100
+Stage 10,Blastulation end,,A. retusa,5hmC,27,Rep1,37,108
+Stage 10,Blastulation end,,A. retusa,5hmC,27,Rep2,19,100
+Stage 10,Blastulation end,,A. retusa,5hmC,27,Rep3,20,114
+Stage 10,Blastulation end,,A. retusa,5hmC,27,Rep4,18,129
+Stage 11,Gastrula,,A. retusa,5hmC,27,Rep1,17,100
+Stage 11,Gastrula,,A. retusa,5hmC,27,Rep2,21,126
+Stage 11,Gastrula,,A. retusa,5hmC,27,Rep3,24,129
+Stage 11,Gastrula,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 12,Round stage,,A. retusa,5hmC,27,Rep1,205,99
+Stage 12,Round stage,,A. retusa,5hmC,27,Rep2,28,80
+Stage 12,Round stage,,A. retusa,5hmC,27,Rep3,23,106
+Stage 12,Round stage,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 13,Early tear drop,,A. retusa,5hmC,27,Rep1,23,122
+Stage 13,Early tear drop,,A. retusa,5hmC,27,Rep2,22,122
+Stage 13,Early tear drop,,A. retusa,5hmC,27,Rep3,24,96
+Stage 13,Early tear drop,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 14,Tear drop,,A. retusa,5hmC,27,Rep1,15,64
+Stage 14,Tear drop,,A. retusa,5hmC,27,Rep2,19,88
+Stage 14,Tear drop,,A. retusa,5hmC,27,Rep3,25,104
+Stage 14,Tear drop,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 15,Late tear drop,,A. retusa,5hmC,27,Rep1,94,80
+Stage 15,Late tear drop,,A. retusa,5hmC,27,Rep2,21,52
+Stage 15,Late tear drop,,A. retusa,5hmC,27,Rep3,18,52
+Stage 15,Late tear drop,,A. retusa,5hmC,27,Rep4,18,56
+Stage 16,Early elongated,,A. retusa,5hmC,27,Rep1,45,102
+Stage 16,Early elongated,,A. retusa,5hmC,27,Rep2,22,170
+Stage 16,Early elongated,,A. retusa,5hmC,27,Rep3,17,100
+Stage 16,Early elongated,,A. retusa,5hmC,27,Rep4,NA,NA
+Stage 17,Swimming larvae,,A. retusa,5hmC,27,Rep1,16,140
+Stage 17,Swimming larvae,,A. retusa,5hmC,27,Rep2,16,102
+Stage 17,Swimming larvae,,A. retusa,5hmC,27,Rep3,16,108
+Stage 17,Swimming larvae,,A. retusa,5hmC,27,Rep4,NA,NA
+HF4.RFU,Standard,Standard,Standard,5hmC,NA,Rep1,10,NA
+HF4.RFU,Standard,Standard,Standard,5hmC,NA,Rep2,8,NA
+HF4.RFU,Standard,Standard,Standard,5hmC,NA,Rep3,8,NA
+Std0.5,Standard,Standard,Standard,5hmC,NA,Rep1,252,NA
+Std0.5,Standard,Standard,Standard,5hmC,NA,Rep2,330,NA
+Std0.5,Standard,Standard,Standard,5hmC,NA,Rep3,263,NA
+Std1,Standard,Standard,Standard,5hmC,NA,Rep1,1067,NA
+Std1,Standard,Standard,Standard,5hmC,NA,Rep2,1160,NA
+Std1,Standard,Standard,Standard,5hmC,NA,Rep3,937,NA
+Std2,Standard,Standard,Standard,5hmC,NA,Rep1,1249,NA
+Std2,Standard,Standard,Standard,5hmC,NA,Rep2,1047,NA
+Std2,Standard,Standard,Standard,5hmC,NA,Rep3,1085,NA
+Std5,Standard,Standard,Standard,5hmC,NA,Rep1,2148,NA
+Std5,Standard,Standard,Standard,5hmC,NA,Rep2,1445,NA
+Std5,Standard,Standard,Standard,5hmC,NA,Rep3,1956,NA
+HF5.RFU,Standard,Standard,Standard,5hmC,NA,Rep1,5522,NA
+HF5.RFU,Standard,Standard,Standard,5hmC,NA,Rep2,5084,NA
+HF5.RFU,Standard,Standard,Standard,5hmC,NA,Rep3,4884,NA
