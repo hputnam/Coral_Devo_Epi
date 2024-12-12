@@ -1,58 +1,58 @@
 ﻿Stage,Development,HPF,Species,Mark,Temperature,Replicate.Bio,Fluoro.530.590,DNA.ng
 Sperm,Sperm,0,A. cytherea,5hmC,27,Rep1,16,156
-Sperm,Sperm,,A. cytherea,5hmC,27,Rep2,15,114
-Sperm,Sperm,,A. cytherea,5hmC,27,Rep3,15,140
-Oocytes,Oocytes,,A. cytherea,5hmC,27,Rep1,65,152
-Oocytes,Oocytes,,A. cytherea,5hmC,27,Rep2,13,122
-Oocytes,Oocytes,,A. cytherea,5hmC,27,Rep3,15,94
-Stage 1 ,Fertilized oocyte,,A. cytherea,5hmC,27,Rep1,123,111
-Stage 1 ,Fertilized oocyte,,A. cytherea,5hmC,27,Rep2,400,99
-Stage 1 ,Fertilized oocyte,,A. cytherea,5hmC,27,Rep3,23,84
-Stage 2,4 cells,,A. cytherea,5hmC,27,Rep1,40,100
-Stage 2,4 cells,,A. cytherea,5hmC,27,Rep2,32,102
-Stage 2,4 cells,,A. cytherea,5hmC,27,Rep3,192,68
-Stage 3,8 cells,,A. cytherea,5hmC,27,Rep1,16,98
-Stage 3,8 cells,,A. cytherea,5hmC,27,Rep2,20,120
-Stage 3,8 cells,,A. cytherea,5hmC,27,Rep3,13,112
-Stage 4,Morula,,A. cytherea,5hmC,27,Rep1,14,150
-Stage 4,Morula,,A. cytherea,5hmC,27,Rep2,41,132
-Stage 4,Morula,,A. cytherea,5hmC,27,Rep3,19,110
-Stage 5,Prawn Chip,,A. cytherea,5hmC,27,Rep1,76,44
-Stage 5,Prawn Chip,,A. cytherea,5hmC,27,Rep2,17,72
-Stage 5,Prawn Chip,,A. cytherea,5hmC,27,Rep3,57,68
-Stage 6,Blastula,,A. cytherea,5hmC,27,Rep1,26,60
-Stage 6,Blastula,,A. cytherea,5hmC,27,Rep2,11,116
-Stage 6,Blastula,,A. cytherea,5hmC,27,Rep3,16,71
-Stage 7,Late Blastula,,A. cytherea,5hmC,27,Rep1,29,120
-Stage 7,Late Blastula,,A. cytherea,5hmC,27,Rep2,33,132
-Stage 7,Late Blastula,,A. cytherea,5hmC,27,Rep3,22,136
-Stage 8,Early Bowl,,A. cytherea,5hmC,27,Rep1,13,118
-Stage 8,Early Bowl,,A. cytherea,5hmC,27,Rep2,13,114
-Stage 8,Early Bowl,,A. cytherea,5hmC,27,Rep3,21,134
-Stage 9,Bowl,,A. cytherea,5hmC,27,Rep1,14,120
-Stage 9,Bowl,,A. cytherea,5hmC,27,Rep2,14,60
-Stage 9,Bowl,,A. cytherea,5hmC,27,Rep3,13,64
-Stage 10,Blastulation end,,A. cytherea,5hmC,27,Rep1,8,40
-Stage 10,Blastulation end,,A. cytherea,5hmC,27,Rep2,12,30
-Stage 10,Blastulation end,,A. cytherea,5hmC,27,Rep3,30,120
-Stage 11,Gastrula,,A. cytherea,5hmC,27,Rep1,46,124
-Stage 11,Gastrula,,A. cytherea,5hmC,27,Rep2,62,108
-Stage 11,Gastrula,,A. cytherea,5hmC,27,Rep3,21,128
-Stage 12,Round stage,,A. cytherea,5hmC,27,Rep1,35,102
-Stage 12,Round stage,,A. cytherea,5hmC,27,Rep2,23,108
-Stage 12,Round stage,,A. cytherea,5hmC,27,Rep3,17,76
-Stage 13,Early tear drop,,A. cytherea,5hmC,27,Rep1,58,95
-Stage 13,Early tear drop,,A. cytherea,5hmC,27,Rep2,55,162
-Stage 13,Early tear drop,,A. cytherea,5hmC,27,Rep3,74,126
-Stage 14,Tear drop,,A. cytherea,5hmC,27,Rep1,65,114
-Stage 14,Tear drop,,A. cytherea,5hmC,27,Rep2,73,104
-Stage 14,Tear drop,,A. cytherea,5hmC,27,Rep3,84,114
-Stage 15,Late tear drop,,A. cytherea,5hmC,27,Rep1,17,112
-Stage 15,Late tear drop,,A. cytherea,5hmC,27,Rep2,16,129
-Stage 15,Late tear drop,,A. cytherea,5hmC,27,Rep3,20,108
-Stage 16,Early elongated,,A. cytherea,5hmC,27,Rep1,24,108
-Stage 16,Early elongated,,A. cytherea,5hmC,27,Rep2,19,48
-Stage 16,Early elongated,,A. cytherea,5hmC,27,Rep3,25,108
+Sperm,Sperm,0,A. cytherea,5hmC,27,Rep2,15,114
+Sperm,Sperm,0,A. cytherea,5hmC,27,Rep3,15,140
+Oocytes,Oocytes,0,A. cytherea,5hmC,27,Rep1,65,152
+Oocytes,Oocytes,0,A. cytherea,5hmC,27,Rep2,13,122
+Oocytes,Oocytes,0,A. cytherea,5hmC,27,Rep3,15,94
+Stage 1 ,Fertilized oocyte,1,A. cytherea,5hmC,27,Rep1,123,111
+Stage 1 ,Fertilized oocyte,1,A. cytherea,5hmC,27,Rep2,400,99
+Stage 1 ,Fertilized oocyte,1,A. cytherea,5hmC,27,Rep3,123,84
+Stage 2,2 cells,2,A. cytherea,5hmC,27,Rep1,40,100
+Stage 2,2 cells,2,A. cytherea,5hmC,27,Rep2,32,102
+Stage 2,2 cells,2,A. cytherea,5hmC,27,Rep3,NA,NA
+Stage 3,8 cells,3,A. cytherea,5hmC,27,Rep1,16,98
+Stage 3,8 cells,3,A. cytherea,5hmC,27,Rep2,20,120
+Stage 3,8 cells,3,A. cytherea,5hmC,27,Rep3,13,112
+Stage 4,Morula,5,A. cytherea,5hmC,27,Rep1,14,150
+Stage 4,Morula,5,A. cytherea,5hmC,27,Rep2,41,132
+Stage 4,Morula,5,A. cytherea,5hmC,27,Rep3,19,110
+Stage 5,Prawn Chip,6,A. cytherea,5hmC,27,Rep1,76,44
+Stage 5,Prawn Chip,6,A. cytherea,5hmC,27,Rep2,17,72
+Stage 5,Prawn Chip,6,A. cytherea,5hmC,27,Rep3,57,68
+Stage 6,Blastula,8,A. cytherea,5hmC,27,Rep1,26,60
+Stage 6,Blastula,8,A. cytherea,5hmC,27,Rep2,11,116
+Stage 6,Blastula,8,A. cytherea,5hmC,27,Rep3,16,71
+Stage 7,Late Blastula,9,A. cytherea,5hmC,27,Rep1,29,120
+Stage 7,Late Blastula,9,A. cytherea,5hmC,27,Rep2,33,132
+Stage 7,Late Blastula,9,A. cytherea,5hmC,27,Rep3,22,136
+Stage 8,Early Bowl,12.5,A. cytherea,5hmC,27,Rep1,13,118
+Stage 8,Early Bowl,12.5,A. cytherea,5hmC,27,Rep2,13,114
+Stage 8,Early Bowl,12.5,A. cytherea,5hmC,27,Rep3,21,134
+Stage 9,Bowl,12.5,A. cytherea,5hmC,27,Rep1,14,120
+Stage 9,Bowl,12.5,A. cytherea,5hmC,27,Rep2,14,60
+Stage 9,Bowl,12.5,A. cytherea,5hmC,27,Rep3,13,64
+Stage 10,Blastulation end,17.5,A. cytherea,5hmC,27,Rep1,8,40
+Stage 10,Blastulation end,17.5,A. cytherea,5hmC,27,Rep2,12,30
+Stage 10,Blastulation end,17.5,A. cytherea,5hmC,27,Rep3,30,120
+Stage 11,Gastrula,20,A. cytherea,5hmC,27,Rep1,46,124
+Stage 11,Gastrula,20,A. cytherea,5hmC,27,Rep2,62,108
+Stage 11,Gastrula,20,A. cytherea,5hmC,27,Rep3,21,128
+Stage 12,Round stage,36,A. cytherea,5hmC,27,Rep1,35,102
+Stage 12,Round stage,36,A. cytherea,5hmC,27,Rep2,23,108
+Stage 12,Round stage,36,A. cytherea,5hmC,27,Rep3,17,76
+Stage 13,Early tear drop,54,A. cytherea,5hmC,27,Rep1,58,95
+Stage 13,Early tear drop,54,A. cytherea,5hmC,27,Rep2,55,162
+Stage 13,Early tear drop,54,A. cytherea,5hmC,27,Rep3,74,126
+Stage 14,Tear drop,86,A. cytherea,5hmC,27,Rep1,65,114
+Stage 14,Tear drop,86,A. cytherea,5hmC,27,Rep2,73,104
+Stage 14,Tear drop,86,A. cytherea,5hmC,27,Rep3,84,114
+Stage 15,Late tear drop,98,A. cytherea,5hmC,27,Rep1,17,112
+Stage 15,Late tear drop,98,A. cytherea,5hmC,27,Rep2,16,129
+Stage 15,Late tear drop,98,A. cytherea,5hmC,27,Rep3,20,108
+Stage 16,Early elongated,170,A. cytherea,5hmC,27,Rep1,24,108
+Stage 16,Early elongated,170,A. cytherea,5hmC,27,Rep2,19,48
+Stage 16,Early elongated,170,A. cytherea,5hmC,27,Rep3,25,108
 HF4.RFU,Standard,Standard,Standard,5hmC,NA,Rep1,7,NA
 HF4.RFU,Standard,Standard,Standard,5hmC,NA,Rep2,8,NA
 HF4.RFU,Standard,Standard,Standard,5hmC,NA,Rep3,8,NA

@@ -8,6 +8,8 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(ggsci)
+library(emmeans)
+library(multcomp)
 ```
 
 5 methyl cytosine 5mC Quantitifcation
@@ -21,7 +23,7 @@ Relative %5mC = ((Sample RFU - MF3 RFU)/ input DNA ng) / ((MF4 RFU - MF3 RFU)x 2
 S is the amount of input sample DNA in ng.
 P is the amount of input positive control (MF4) in ng.
 
-Acropora hyacinthus
+Acropora hyacinthus 5mC 
 ```{r}
 ahya <- read.csv("RAnalysis/data/Ahyacinthus_5mC.csv",  na.strings = "NA")
 
@@ -38,14 +40,17 @@ MF3.RFU.ahya <- stnds$mean.RFU[[1]]
 MF4.RFU.ahya <- stnds$mean.RFU[[2]]
 MF4.ng.ahya <- 10
 
-ahya$rel.percent.5mC <- (((ahya$Fluoro.530.590 -MF3.RFU.ahya )/ ahya$DNA.ng) / ((MF4.RFU.ahya - MF3.RFU.ahya)* 2 /MF4.ng.ahya))*100
+ahya$rel.percent <- (((ahya$Fluoro.530.590 -MF3.RFU.ahya )/ ahya$DNA.ng) / ((MF4.RFU.ahya - MF3.RFU.ahya)* 2 /MF4.ng.ahya))*100
+
+
+ahya.5mC <- ahya
 
 ahya.27 <- ahya %>%
 filter(Temperature ==27)
 
 ```
 
-Acropora cytherea
+Acropora cytherea 5mC 
 ```{r}
 acyth <- read.csv("RAnalysis/data/Acytherea_5mC.csv",  na.strings = "NA")
 
@@ -62,13 +67,13 @@ MF3.RFU.acyth <- stnds$mean.RFU[[1]]
 MF4.RFU.acyth <- stnds$mean.RFU[[2]]
 MF4.ng.acyth <- 10
 
-acyth$rel.percent.5mC <- (((acyth$Fluoro.530.590 -MF3.RFU.acyth )/ acyth$DNA.ng) / ((MF4.RFU.acyth - MF3.RFU.acyth)* 2 /MF4.ng.acyth))*100
+acyth$rel.percent <- (((acyth$Fluoro.530.590 -MF3.RFU.acyth )/ acyth$DNA.ng) / ((MF4.RFU.acyth - MF3.RFU.acyth)* 2 /MF4.ng.acyth))*100
 
 acyth <- acyth %>%
 filter(Temperature ==27)
 
 ```
-Acropora retusa
+Acropora retusa 5mC 
 ```{r}
 aret <- read.csv("RAnalysis/data/Aretusa_5mC.csv",  na.strings = "NA")
 
@@ -85,13 +90,13 @@ MF3.RFU.aret <- stnds$mean.RFU[[1]]
 MF4.RFU.aret <- stnds$mean.RFU[[2]]
 MF4.ng.aret <- 10
 
-aret$rel.percent.5mC <- (((aret$Fluoro.530.590 -MF3.RFU.aret )/ aret$DNA.ng) / ((MF4.RFU.aret - MF3.RFU.aret)* 2 /MF4.ng.aret))*100
+aret$rel.percent <- (((aret$Fluoro.530.590 -MF3.RFU.aret )/ aret$DNA.ng) / ((MF4.RFU.aret - MF3.RFU.aret)* 2 /MF4.ng.aret))*100
 
 aret <- aret %>%
 filter(Temperature ==27) %>%
 filter(!Stage == "Stage 12")
 ```
-Acropora pulchra
+Acropora pulchra 5mC 
 ```{r}
 apul <- read.csv("RAnalysis/data/Apulchra_5mC.csv",  na.strings = "NA")
 
@@ -107,13 +112,14 @@ MF3.RFU.apul <- stnds$mean.RFU[[1]]
 MF4.RFU.apul <- stnds$mean.RFU[[2]]
 MF4.ng.apul <- 10
 
-apul$rel.percent.5mC <- (((apul$Fluoro.530.590 -MF3.RFU.apul )/ apul$DNA.ng) / ((MF4.RFU.apul - MF3.RFU.apul)* 2 /MF4.ng.apul))*100
+apul$rel.percent <- (((apul$Fluoro.530.590 -MF3.RFU.apul )/ apul$DNA.ng) / ((MF4.RFU.apul - MF3.RFU.apul)* 2 /MF4.ng.apul))*100
 
 apul <- apul %>%
 filter(Temperature ==27)
 
 ```
 
+5mC All Species Ambient 27°C
 ```{r}
 #examine only 27
 
@@ -129,8 +135,8 @@ devo.27 <- all.species.5mC %>%
 summary_stats.devo.27 <- devo.27 %>%
   group_by(Species, Stage, Development, Mark) %>%
   summarize(
-    mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
-    sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
+    mean_5mC = mean(rel.percent, na.rm = TRUE),
+    sem_5mC = sd(rel.percent, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
@@ -148,12 +154,7 @@ summary_stats.devo.27 %>%
   theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
 
-
-```
-
-Reduce to commonly sampled timepoints and analyze with ANOVA
-```{r}
-
+#reduce to commonly sampled time points
 devo.27.stages <- devo.27 %>% 
   filter(!Stage == "Stage 5.5") %>% 
   filter(!Stage == "Stage 7.5") %>% 
@@ -172,7 +173,7 @@ devo.27.stages <- devo.27.stages %>%
   mutate(Development = fct_relevel(Development, "Sperm", "Oocytes", "Fertilized oocyte", "4 cells", "8 cells", "Morula",          "Prawn Chip", "Blastula", "Late Blastula", "Early Bowl", "Bowl", "Blastulation end", "Gastrula", "Early tear drop",
 "Tear drop", "Late tear drop", "Early elongated"))
 
-stage.5mC.res <- aov(log10(rel.percent.5mC) ~ Stage*Species, data= devo.27.stages)
+stage.5mC.res <- aov(log10(rel.percent) ~ Stage*Species, data= devo.27.stages)
 summary(stage.5mC.res)
 hist(stage.5mC.res$residuals)
 boxplot(stage.5mC.res$residuals)
@@ -183,8 +184,8 @@ Tukey.ph <- TukeyHSD(stage.5mC.res)
 summary_stats.devo.27 <- devo.27.stages %>%
   group_by(Species, Stage, Development, Mark) %>%
   summarize(
-    mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
-    sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
+    mean_5mC = mean(rel.percent, na.rm = TRUE),
+    sem_5mC = sd(rel.percent, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
@@ -223,29 +224,62 @@ S is the amount of input sample DNA in ng.
 P is the amount of input positive control (HF5) in ng.
 
 
-Acropora hyacinthus
+Acropora hyacinthus 5hmC
 ```{r}
-ahya.5hmC <- read.csv("RAnalysis/data/Ahyacinthus_5hmC.csv",  na.strings = "NA")
+#For Stage 3, Stage 5, Stage 7, Stage 8, Stage 10 at 31°C
+#Fluo standard 0 = 7.666667 and Fluo Standard 10 = 51167.33333 because they were on cytherea plate
 
+ahya.5hmC <- read.csv("RAnalysis/data/Ahyacinthus_5hmC.csv",  na.strings = "NA")
 str(ahya.5hmC)
+unique(ahya.5hmC$Stage)
 
 stnds.ahya.5hmC <- ahya.5hmC %>% filter(Species=="Standard") %>%
   group_by(Stage) %>%
   summarize(mean.RFU=mean(Fluoro.530.590))
 
-ahya.5hmC <- ahya.5hmC %>% filter(Species=="A. hyacinthus") 
-
 HF4.RFU.ahya.5hmC <- stnds.ahya.5hmC$mean.RFU[[1]]
 HF5.RFU.ahya.5hmC <- stnds.ahya.5hmC$mean.RFU[[2]]
-HF5.ng.ahya.5hmC <- 10
+HF5.ng.ahya.5hmC <- 5/10
 
-ahya.5hmC$rel.percent.5mC <- (((ahya.5hmC$Fluoro.530.590 -HF4.RFU.ahya.5hmC )/ ahya.5hmC$DNA.ng) / ((HF5.RFU.ahya.5hmC - HF4.RFU.ahya.5hmC)* 5 /HF5.ng.ahya.5hmC))*100
-
-ahya.5hmC <- ahya.5hmC %>%
+ahya.5hmC.27 <- ahya.5hmC %>%
 filter(Temperature ==27)
 
-```
+ahya.5hmC.27$rel.percent <- (((ahya.5hmC.27$Fluoro.530.590 -HF4.RFU.ahya.5hmC )/ ahya.5hmC.27$DNA.ng) / ((HF5.RFU.ahya.5hmC - HF4.RFU.ahya.5hmC)* HF5.ng.ahya.5hmC))*100
 
+#Stage 1, Stage 2, Stage 4, Stage 6, Stage 9, Stage 11, Stage 12
+ahya.5hmC.31.A <- ahya.5hmC %>%
+  filter(Temperature ==31)%>%
+  filter(!Stage=="Stage 3") %>%
+  filter(!Stage=="Stage 5") %>%
+  filter(!Stage=="Stage 7") %>%
+  filter(!Stage=="Stage 8") %>%
+  filter(!Stage=="Stage 10")
+
+ahya.5hmC.31.A$rel.percent <- (((ahya.5hmC.31.A$Fluoro.530.590 -HF4.RFU.ahya.5hmC )/ ahya.5hmC.31.A$DNA.ng) / ((HF5.RFU.ahya.5hmC - HF4.RFU.ahya.5hmC)* HF5.ng.ahya.5hmC))*100
+
+#Stage 3, Stage 5, Stage 7, Stage 8, Stage 10
+ahya.5hmC.31.B <- ahya.5hmC %>%
+  filter(Temperature ==31) %>%
+  filter(!Stage=="Stage 1") %>%
+  filter(!Stage=="Stage 2") %>%
+  filter(!Stage=="Stage 4") %>%
+  filter(!Stage=="Stage 6") %>%
+  filter(!Stage=="Stage 9") %>%
+  filter(!Stage=="Stage 11") %>%
+  filter(!Stage=="Stage 12")
+
+
+HF4.RFU.ahya.5hmC.B <- 7.666667
+HF5.RFU.ahya.5hmC.B <- 51167.33333
+
+
+ahya.5hmC.31.B$rel.percent <- (((ahya.5hmC.31.B$Fluoro.530.590 -HF4.RFU.ahya.5hmC.B )/ ahya.5hmC.31.B$DNA.ng) / ((HF5.RFU.ahya.5hmC.B - HF4.RFU.ahya.5hmC.B)* HF5.ng.ahya.5hmC))*100
+
+ahya.5hmC.all <- rbind(ahya.5hmC.27, ahya.5hmC.31.A, ahya.5hmC.31.B)
+
+ahya.5hmC <- ahya.5hmC.27
+
+```
 
 Acropora cytherea 5hmC
 ```{r}
@@ -263,12 +297,13 @@ HF4.RFU.acyth <- stnds.acyth.5hmC$mean.RFU[[1]]
 HF5.RFU.acyth <- stnds.acyth.5hmC$mean.RFU[[2]]
 HF5.ng.acyth <- 10
 
-acyth.5hmC$rel.percent.5mC <- (((acyth.5hmC$Fluoro.530.590 -HF4.RFU.acyth )/ acyth.5hmC$DNA.ng) / ((HF5.RFU.acyth - HF4.RFU.acyth)* 5 /HF5.ng.acyth))*100
+acyth.5hmC$rel.percent <- (((acyth.5hmC$Fluoro.530.590 -HF4.RFU.acyth )/ acyth.5hmC$DNA.ng) / ((HF5.RFU.acyth - HF4.RFU.acyth)* 5 /HF5.ng.acyth))*100
 
 acyth.5hmC <- acyth.5hmC %>%
 filter(Temperature ==27)
 
 ```
+
 Acropora pulchra 5hmC
 ```{r}
 apul.5hmC <- read.csv("RAnalysis/data/Apulchra_5hmC.csv",  na.strings = "NA")
@@ -285,7 +320,7 @@ HF4.RFU.apul <- stnds.apul.5hmC$mean.RFU[[1]]
 HF5.RFU.apul <- stnds.apul.5hmC$mean.RFU[[2]]
 HF5.ng.apul <- 10
 
-apul.5hmC$rel.percent.5mC <- (((apul.5hmC$Fluoro.530.590 -HF4.RFU.apul)/ apul.5hmC$DNA.ng) / ((HF5.RFU.apul - HF4.RFU.apul)* 5 /HF5.ng.apul))*100
+apul.5hmC$rel.percent <- (((apul.5hmC$Fluoro.530.590 -HF4.RFU.apul)/ apul.5hmC$DNA.ng) / ((HF5.RFU.apul - HF4.RFU.apul)* 5 /HF5.ng.apul))*100
 
 apul.5hmC <- apul.5hmC %>%
 filter(Temperature ==27)
@@ -308,7 +343,7 @@ HF4.RFU.aret <- stnds.aret.5hmC$mean.RFU[[1]]
 HF5.RFU.aret <- stnds.aret.5hmC$mean.RFU[[2]]
 HF5.ng.aret <- 10
 
-aret.5hmC$rel.percent.5mC <- (((aret.5hmC$Fluoro.530.590 -HF4.RFU.aret )/ aret.5hmC$DNA.ng) / ((HF5.RFU.aret - HF4.RFU.aret)* 5 /HF5.ng.aret))*100
+aret.5hmC$rel.percent <- (((aret.5hmC$Fluoro.530.590 -HF4.RFU.aret )/ aret.5hmC$DNA.ng) / ((HF5.RFU.aret - HF4.RFU.aret)* 5 /HF5.ng.aret))*100
 
 aret.5hmC <- aret.5hmC %>%
 filter(Temperature ==27)
@@ -331,8 +366,8 @@ devo.5hmC.27 <- all.species.5hmC %>%
 summary_stats.devo.27.5hmC <- devo.5hmC.27 %>%
   group_by(Species, Stage, Development, Mark) %>%
   summarize(
-    mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
-    sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
+    mean_5mC = mean(rel.percent, na.rm = TRUE),
+    sem_5mC = sd(rel.percent, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
@@ -351,10 +386,7 @@ summary_stats.devo.27.5hmC %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
 
 
-```
-
-Reduce to commonly sampled timepoints and analyze with ANOVA
-```{r}
+#Reduce to commonly sampled timepoints and analyze with ANOVA
 
 devo.5hmC.27.stages <- devo.5hmC.27 %>% 
   filter(!Stage == "Stage 5.5") %>% 
@@ -374,7 +406,7 @@ devo.5hmC.27.stages <- devo.5hmC.27.stages %>%
   mutate(Development = fct_relevel(Development, "Sperm", "Oocytes", "Fertilized oocyte", "4 cells", "8 cells", "Morula",          "Prawn Chip", "Blastula", "Late Blastula", "Early Bowl", "Bowl", "Blastulation end", "Gastrula", "Early tear drop",
 "Tear drop", "Late tear drop", "Early elongated"))
 
-stage.5hmC.res <- aov(log10(rel.percent.5mC) ~ Stage*Species, data= devo.5hmC.27.stages)
+stage.5hmC.res <- aov(log10(rel.percent) ~ Stage*Species, data= devo.5hmC.27.stages)
 summary(stage.5hmC.res)
 hist(stage.5hmC.res$residuals)
 boxplot(stage.5hmC.res$residuals)
@@ -385,8 +417,8 @@ Tukey.ph.5hmC <- TukeyHSD(stage.5hmC.res)
 summary_stats.5hmC.27 <- devo.5hmC.27.stages %>%
   group_by(Species, Stage, Development, Mark) %>%
   summarize(
-    mean_5mC = mean(rel.percent.5mC, na.rm = TRUE),
-    sem_5mC = sd(rel.percent.5mC, na.rm = TRUE) / sqrt(n()),
+    mean_5mC = mean(rel.percent, na.rm = TRUE),
+    sem_5mC = sd(rel.percent, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
@@ -418,6 +450,8 @@ calculation for the percentage of 5-fC in your total DNA can be carried out usin
 
 Relative %5fC = ((Sample OD - NC OD)/ input DNA ng) / ((PC OD - NC OD) /amount of input positive control (PC) in ng)
 
+PC = postive control
+NC = negative control
 S is the amount of input sample DNA in ng.
 P is the amount of input positive control (HF5) in ng.
 
@@ -437,7 +471,9 @@ NC.OD.ahya <- stnds.ahya.5fC$mean.RFU[[1]]
 PC.OD.ahya <- stnds.ahya.5fC$mean.RFU[[2]]
 PC.ng.ahya <- 0.2
 
-ahya.5fC$rel.percent.5fC <- (((ahya.5fC$Abs.450 -NC.OD.ahya )/ ahya.5fC$DNA.ng) / ((PC.OD.ahya - NC.OD.ahya)/PC.ng.ahya))*100
+ahya.5fC$rel.percent <- (((ahya.5fC$Abs.450 -NC.OD.ahya )/ ahya.5fC$DNA.ng) / ((PC.OD.ahya - NC.OD.ahya)/PC.ng.ahya))*100
+
+ahya.5fC.all <- ahya.5fC
 
 ahya.5fC <- ahya.5fC %>%
 filter(Temperature ==27)
@@ -460,12 +496,13 @@ NC.OD.acyth <- stnds.acyth.5fC$mean.RFU[[1]]
 PC.OD.acyth <- stnds.acyth.5fC$mean.RFU[[2]]
 PC.ng.acyth <- 0.2
 
-acyth.5fC$rel.percent.5fC <- (((acyth.5fC$Abs.450 -NC.OD.acyth )/ acyth.5fC$DNA.ng) / ((PC.OD.acyth - NC.OD.acyth)/PC.ng.acyth))*100
+acyth.5fC$rel.percent <- (((acyth.5fC$Abs.450 -NC.OD.acyth )/ acyth.5fC$DNA.ng) / ((PC.OD.acyth - NC.OD.acyth)/PC.ng.acyth))*100
 
 acyth.5fC <- acyth.5fC %>%
 filter(Temperature ==27)
 
 ```
+
 Acropora pulchra 5fC
 ```{r}
 apul.5fC <- read.csv("RAnalysis/data/Apulchra_5fC.csv",  na.strings = "NA")
@@ -482,7 +519,7 @@ NC.OD.apul <- stnds.apul.5fC$mean.RFU[[1]]
 PC.OD.apul <- stnds.apul.5fC$mean.RFU[[2]]
 PC.ng.apul <- 0.2
 
-apul.5fC$rel.percent.5fC <- (((apul.5fC$Abs.450 -NC.OD.apul )/ apul.5fC$DNA.ng) / ((PC.OD.apul - NC.OD.apul)/PC.ng.apul))*100
+apul.5fC$rel.percent <- (((apul.5fC$Abs.450 -NC.OD.apul )/ apul.5fC$DNA.ng) / ((PC.OD.apul - NC.OD.apul)/PC.ng.apul))*100
 
 apul.5fC <- apul.5fC %>%
 filter(Temperature ==27)
@@ -505,7 +542,7 @@ NC.OD.aret <- stnds.aret.5fC$mean.RFU[[1]]
 PC.OD.aret <- stnds.aret.5fC$mean.RFU[[2]]
 PC.ng.aret <- 0.2
 
-aret.5fC$rel.percent.5fC <- (((aret.5fC$Abs.450 -NC.OD.aret )/ aret.5fC$DNA.ng) / ((PC.OD.aret - NC.OD.aret)/PC.ng.aret))*100
+aret.5fC$rel.percent <- (((aret.5fC$Abs.450 -NC.OD.aret )/ aret.5fC$DNA.ng) / ((PC.OD.aret - NC.OD.aret)/PC.ng.aret))*100
 
 aret.5fC <- aret.5fC %>%
 filter(Temperature ==27)
@@ -528,8 +565,8 @@ devo.5fC.27 <- all.species.5fC %>%
 summary_stats.devo.27.5fC <- devo.5fC.27 %>%
   group_by(Species, Stage, Development, Mark) %>%
   summarize(
-    mean_5mC = mean(rel.percent.5fC, na.rm = TRUE),
-    sem_5mC = sd(rel.percent.5fC, na.rm = TRUE) / sqrt(n()),
+    mean_5mC = mean(rel.percent, na.rm = TRUE),
+    sem_5mC = sd(rel.percent, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
@@ -548,10 +585,8 @@ summary_stats.devo.27.5fC %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
 
 
-```
+#Reduce to commonly sampled timepoints and analyze with ANOVA
 
-Reduce to commonly sampled timepoints and analyze with ANOVA
-```{r}
 
 devo.5fC.27.stages <- devo.5fC.27 %>% 
   filter(!Stage == "Stage 5.5") %>% 
@@ -571,7 +606,7 @@ devo.5fC.27.stages <- devo.5fC.27.stages %>%
   mutate(Development = fct_relevel(Development, "Sperm", "Oocytes", "Fertilized oocyte", "4 cells", "8 cells", "Morula",          "Prawn Chip", "Blastula", "Late Blastula", "Early Bowl", "Bowl", "Blastulation end", "Gastrula", "Early tear drop",
 "Tear drop", "Late tear drop", "Early elongated"))
 
-stage.5fC.res <- aov(log10(rel.percent.5fC) ~ Stage*Species, data= devo.5fC.27.stages)
+stage.5fC.res <- aov(log10(rel.percent) ~ Stage*Species, data= devo.5fC.27.stages)
 summary(stage.5fC.res)
 hist(stage.5fC.res$residuals)
 boxplot(stage.5fC.res$residuals)
@@ -582,8 +617,8 @@ Tukey.ph.5fC <- TukeyHSD(stage.5fC.res)
 summary_stats.5fC.27 <- devo.5fC.27.stages %>%
   group_by(Species, Stage, Development, Mark) %>%
   summarize(
-    mean_5mC = mean(rel.percent.5fC, na.rm = TRUE),
-    sem_5mC = sd(rel.percent.5fC, na.rm = TRUE) / sqrt(n()),
+    mean_5mC = mean(rel.percent, na.rm = TRUE),
+    sem_5mC = sd(rel.percent, na.rm = TRUE) / sqrt(n()),
     .groups = 'drop'
   )
 
@@ -605,7 +640,7 @@ Fig3 <- summary_stats.5fC.27 %>%
 
 ```
 
-Plot all together
+Plot all together Marks and Species at 27°C
 ```{r}
 all <- rbind(summary_stats.devo.27, summary_stats.5hmC.27, summary_stats.5fC.27)
 
@@ -625,10 +660,115 @@ plot <- all %>%
   ) +
   scale_color_npg() +
   scale_fill_npg() +
+  facet_wrap(~ Mark, scales = "free_y", nrow = 3)+  # Facet by 'Mark' with free y-axis scales
   theme_classic() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +  # Rotate x-axis labels for better readability
-  facet_wrap(~ Mark, scales = "free_y", nrow = 3)  # Facet by 'Mark' with free y-axis scales
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        strip.text.x = element_text(size = 12, color = "black", face = "bold"))   # Rotate x-axis labels for better readability
+plot
 
 ggsave("RAnalysis/output/Developmental_DNA_Methylation.pdf", plot = plot, width = 10, height = 6)
 
+ggsave("RAnalysis/output/Developmental_DNA_Methylation.jpg", plot = plot, width = 10, height = 6)
 ```
+
+Acropora hyacinthus effect of increased temperature (27°C vs 30°C)
+```{r}
+
+colnames(ahya.5mC)[8] <- "Fluor.Abs"
+colnames(ahya.5hmC.all)[8] <- "Fluor.Abs"
+colnames(ahya.5fC.all)[8] <- "Fluor.Abs"
+
+
+ahya.all <- rbind(ahya.5mC,ahya.5hmC.all,ahya.5fC.all)
+
+ahya.all <- ahya.all %>% 
+  filter(!Stage == "Sperm") %>% 
+  filter(!Stage == "Oocytes") %>% 
+  filter(!Stage == "Stage 13") %>% 
+  filter(!Stage == "Stage 14") %>% 
+  filter(!Stage == "Stage 15") %>% 
+  filter(!Stage == "Stage 16") %>%
+  filter(!Stage == "Stage 17") %>%
+  filter(!Stage == "Stage 17.5")
+
+
+str(ahya.all)
+ahya.all$Species <- as.factor(ahya.all$Species)
+ahya.all$Stage <- as.factor(ahya.all$Stage)
+ahya.all$Temperature <- as.factor(ahya.all$Temperature)
+
+unique(ahya.all$Stage)
+unique(ahya.all$Development)
+unique(ahya.all$Temperature)
+
+ahya.all <- ahya.all %>% 
+  mutate(Development = fct_relevel(Development, "Fertilized oocyte", "2 cells", "8 cells", "Morula",          "Prawn Chip", "Blastula", "Late Blastula", "Early Bowl", "Bowl", "Blastulation end", "Gastrula"))
+
+# ahya.all.res <- aov(log10(rel.percent) ~ Stage*Temperature, data= ahya.all)
+# summary(ahya.all.res)
+# hist(ahya.all.res$residuals)
+# boxplot(ahya.all.res$residuals)
+# plot(ahya.all.res$residuals, ahya.all.res$fitted.values)
+# 
+# 
+# ahya.all.contr <- emmeans::emmeans(object = ahya.all.res,
+#                                     pairwise ~ "Stage*Temperature",
+#                                     adjust = "tukey")
+# 
+# ahya.all.mod_means <- multcomp::cld(object = ahya.all.contr$emmeans,
+#                            Letters = letters)
+
+#ahya.all <- left_join(ahya.all)
+
+# ggplot(data = ahya.all.mod_means,
+#        aes(x = Stage, y = emmean, group = Temperature, color = Temperature)) +
+#   geom_errorbar(aes(ymin = lower.CL, 
+#                     ymax = upper.CL), 
+#                 width = 0.2) +
+#   geom_point() +
+#   geom_text(aes(label = gsub(" ", "", .group)),
+#             position = position_nudge(x = 0.2)) +
+#   labs(caption = "Means followed by a common letter are\nnot significantly different according to the Tukey-test")
+
+summary_stats.ahya.all <- ahya.all %>%
+  group_by(Stage, Temperature, Development, Mark) %>%
+  summarize(
+    mean_5mC = mean(rel.percent, na.rm = TRUE),
+    sem_5mC = sd(rel.percent, na.rm = TRUE) / sqrt(n()),
+    .groups = 'drop'
+  )
+
+cols <- c("27" = "#4DBBD5FF", "31" = "#DC0000FF")
+
+# Reorder the 'Mark' factor
+summary_stats.ahya.all <- summary_stats.ahya.all %>%
+  mutate(Mark = factor(Mark, levels = c("5mC", "5hmC", "5fC")))
+
+temp.plot <- summary_stats.ahya.all %>%
+  ggplot(aes(x = Development, y = mean_5mC, group = Temperature, color = Temperature)) +
+  geom_line(aes(linetype = Temperature), size = 1) +  # Line connecting mean points
+  geom_point(size = 3) +  # Mean points
+  geom_errorbar(aes(ymin = mean_5mC - sem_5mC, ymax = mean_5mC + sem_5mC), width = 0.2) +  # SEM bars
+  labs(
+    x = "Stage",
+    y = " Relative % Cytosine Methylation"
+  ) +
+  scale_color_manual(values = cols)+
+  #scale_fill_npg()+
+  facet_wrap(~ Mark, scales = "free_y", nrow = 3) + # Facet by 'Mark' with free y-axis scales
+  theme_classic()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        strip.text.x = element_text(size = 12, color = "black", face = "bold"))  # Rotate x-axis labels for better readability
+
+temp.plot
+
+ggsave("RAnalysis/output/Ahya_Temperature_Developmental_DNA_Methylation.pdf", plot = temp.plot, width = 10, height = 6)
+
+ggsave("RAnalysis/output/Ahya_Temperature_Developmental_DNA_Methylation.jpg", plot = temp.plot, width = 10, height = 6)
+
+```
+
+A. hyacinthus fertilization data
+
+
+A. ahyacinthus development data

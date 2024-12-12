@@ -5,57 +5,57 @@ Sperm,Sperm,0,A. pulchra,5mC,27,Rep3,418,128
 Oocytes,Oocytes,0,A. pulchra,5mC,27,Rep1,295,116
 Oocytes,Oocytes,0,A. pulchra,5mC,27,Rep2,43,116
 Oocytes,Oocytes,0,A. pulchra,5mC,27,Rep3,45,96
-Stage 1 ,Fertilized oocyte,,A. pulchra,5mC,27,Rep1,44,123
-Stage 1 ,Fertilized oocyte,,A. pulchra,5mC,27,Rep2,43,115
-Stage 1 ,Fertilized oocyte,,A. pulchra,5mC,27,Rep3,46,123
-Stage 2,4 cells,,A. pulchra,5mC,27,Rep1,52,112
-Stage 2,4 cells,,A. pulchra,5mC,27,Rep2,114,140
-Stage 2,4 cells,,A. pulchra,5mC,27,Rep3,137,147
-Stage 3,8 cells,,A. pulchra,5mC,27,Rep1,36,100
-Stage 3,8 cells,,A. pulchra,5mC,27,Rep2,80,118
-Stage 3,8 cells,,A. pulchra,5mC,27,Rep3,78,138
-Stage 4,Morula,,A. pulchra,5mC,27,Rep1,28,52
-Stage 4,Morula,,A. pulchra,5mC,27,Rep2,40,138
-Stage 4,Morula,,A. pulchra,5mC,27,Rep3,30,138
-Stage 5,Prawn Chip,,A. pulchra,5mC,27,Rep1,25,117
-Stage 5,Prawn Chip,,A. pulchra,5mC,27,Rep2,22,117
-Stage 5,Prawn Chip,,A. pulchra,5mC,27,Rep3,19,116
-Stage 6,Blastula,,A. pulchra,5mC,27,Rep1,15,108
-Stage 6,Blastula,,A. pulchra,5mC,27,Rep2,14,112
-Stage 6,Blastula,,A. pulchra,5mC,27,Rep3,24,112
-Stage 7,Late Blastula,,A. pulchra,5mC,27,Rep1,13,120
-Stage 7,Late Blastula,,A. pulchra,5mC,27,Rep2,13,120
-Stage 7,Late Blastula,,A. pulchra,5mC,27,Rep3,20,76
-Stage 8,Early Bowl,,A. pulchra,5mC,27,Rep1,23,52
-Stage 8,Early Bowl,,A. pulchra,5mC,27,Rep2,19,52
-Stage 8,Early Bowl,,A. pulchra,5mC,27,Rep3,21,52
-Stage 9,Bowl,,A. pulchra,5mC,27,Rep1,16,52
-Stage 9,Bowl,,A. pulchra,5mC,27,Rep2,18,52
-Stage 9,Bowl,,A. pulchra,5mC,27,Rep3,15,36
-Stage 10,Blastulation end,,A. pulchra,5mC,27,Rep1,14,128
-Stage 10,Blastulation end,,A. pulchra,5mC,27,Rep2,12,120
-Stage 10,Blastulation end,,A. pulchra,5mC,27,Rep3,12,120
-Stage 11,Gastrula,,A. pulchra,5mC,27,Rep1,16,112
-Stage 11,Gastrula,,A. pulchra,5mC,27,Rep2,17,112
-Stage 11,Gastrula,,A. pulchra,5mC,27,Rep3,14,52
-Stage 12,Round stage,,A. pulchra,5mC,27,Rep1,168,64
-Stage 12,Round stage,,A. pulchra,5mC,27,Rep2,12,48
-Stage 12,Round stage,,A. pulchra,5mC,27,Rep3,23,129
-Stage 13,Early tear drop,,A. pulchra,5mC,27,Rep1,249,114
-Stage 13,Early tear drop,,A. pulchra,5mC,27,Rep2,246,88
-Stage 13,Early tear drop,,A. pulchra,5mC,27,Rep3,143,88
-Stage 14,Tear drop,,A. pulchra,5mC,27,Rep1,652,146
-Stage 14,Tear drop,,A. pulchra,5mC,27,Rep2,621,76
-Stage 14,Tear drop,,A. pulchra,5mC,27,Rep3,636,105
-Stage 15,Late tear drop,,A. pulchra,5mC,27,Rep1,211,118
-Stage 15,Late tear drop,,A. pulchra,5mC,27,Rep2,201,183
-Stage 15,Late tear drop,,A. pulchra,5mC,27,Rep3,222,97
-Stage 16,Early elongated,,A. pulchra,5mC,27,Rep1,853,138
-Stage 16,Early elongated,,A. pulchra,5mC,27,Rep2,793,84
-Stage 16,Early elongated,,A. pulchra,5mC,27,Rep3,914,88
-Stage 17,Swimming larvae,,A. pulchra,5mC,27,Rep1,742,108
-Stage 17,Swimming larvae,,A. pulchra,5mC,27,Rep2,1394,164
-Stage 17,Swimming larvae,,A. pulchra,5mC,27,Rep3,968,126
+Stage 1 ,Fertilized oocyte,1,A. pulchra,5mC,27,Rep1,44,123
+Stage 1 ,Fertilized oocyte,1,A. pulchra,5mC,27,Rep2,43,115
+Stage 1 ,Fertilized oocyte,1,A. pulchra,5mC,27,Rep3,46,123
+Stage 2,2 cells,2,A. pulchra,5mC,27,Rep1,52,112
+Stage 2,2 cells,2,A. pulchra,5mC,27,Rep2,114,140
+Stage 2,2 cells,2,A. pulchra,5mC,27,Rep3,137,147
+Stage 3,8 cells,3,A. pulchra,5mC,27,Rep1,36,100
+Stage 3,8 cells,3,A. pulchra,5mC,27,Rep2,80,118
+Stage 3,8 cells,3,A. pulchra,5mC,27,Rep3,78,138
+Stage 4,Morula,5,A. pulchra,5mC,27,Rep1,28,52
+Stage 4,Morula,5,A. pulchra,5mC,27,Rep2,40,138
+Stage 4,Morula,5,A. pulchra,5mC,27,Rep3,30,138
+Stage 5,Prawn Chip,6,A. pulchra,5mC,27,Rep1,25,117
+Stage 5,Prawn Chip,6,A. pulchra,5mC,27,Rep2,22,117
+Stage 5,Prawn Chip,6,A. pulchra,5mC,27,Rep3,19,116
+Stage 6,Blastula,8,A. pulchra,5mC,27,Rep1,15,108
+Stage 6,Blastula,8,A. pulchra,5mC,27,Rep2,14,112
+Stage 6,Blastula,8,A. pulchra,5mC,27,Rep3,24,112
+Stage 7,Late Blastula,9,A. pulchra,5mC,27,Rep1,13,120
+Stage 7,Late Blastula,9,A. pulchra,5mC,27,Rep2,13,120
+Stage 7,Late Blastula,9,A. pulchra,5mC,27,Rep3,20,76
+Stage 8,Early Bowl,12.5,A. pulchra,5mC,27,Rep1,23,52
+Stage 8,Early Bowl,12.5,A. pulchra,5mC,27,Rep2,19,52
+Stage 8,Early Bowl,12.5,A. pulchra,5mC,27,Rep3,21,52
+Stage 9,Bowl,12.5,A. pulchra,5mC,27,Rep1,16,52
+Stage 9,Bowl,12.5,A. pulchra,5mC,27,Rep2,18,52
+Stage 9,Bowl,12.5,A. pulchra,5mC,27,Rep3,15,36
+Stage 10,Blastulation end,17.5,A. pulchra,5mC,27,Rep1,14,128
+Stage 10,Blastulation end,17.5,A. pulchra,5mC,27,Rep2,12,120
+Stage 10,Blastulation end,17.5,A. pulchra,5mC,27,Rep3,12,120
+Stage 11,Gastrula,20,A. pulchra,5mC,27,Rep1,16,112
+Stage 11,Gastrula,20,A. pulchra,5mC,27,Rep2,17,112
+Stage 11,Gastrula,20,A. pulchra,5mC,27,Rep3,14,52
+Stage 12,Round stage,36,A. pulchra,5mC,27,Rep1,168,64
+Stage 12,Round stage,36,A. pulchra,5mC,27,Rep2,12,48
+Stage 12,Round stage,36,A. pulchra,5mC,27,Rep3,23,129
+Stage 13,Early tear drop,54,A. pulchra,5mC,27,Rep1,249,114
+Stage 13,Early tear drop,54,A. pulchra,5mC,27,Rep2,246,88
+Stage 13,Early tear drop,54,A. pulchra,5mC,27,Rep3,143,88
+Stage 14,Tear drop,86,A. pulchra,5mC,27,Rep1,652,146
+Stage 14,Tear drop,86,A. pulchra,5mC,27,Rep2,621,76
+Stage 14,Tear drop,86,A. pulchra,5mC,27,Rep3,636,105
+Stage 15,Late tear drop,98,A. pulchra,5mC,27,Rep1,211,118
+Stage 15,Late tear drop,98,A. pulchra,5mC,27,Rep2,201,183
+Stage 15,Late tear drop,98,A. pulchra,5mC,27,Rep3,222,97
+Stage 16,Early elongated,170,A. pulchra,5mC,27,Rep1,853,138
+Stage 16,Early elongated,170,A. pulchra,5mC,27,Rep2,793,84
+Stage 16,Early elongated,170,A. pulchra,5mC,27,Rep3,914,88
+Stage 17,Swimming larvae,218,A. pulchra,5mC,27,Rep1,742,108
+Stage 17,Swimming larvae,218,A. pulchra,5mC,27,Rep2,1394,164
+Stage 17,Swimming larvae,218,A. pulchra,5mC,27,Rep3,968,126
 MF3.RFU,Standard,Standard,Standard,5mC,NA,Rep1,13,NA
 MF3.RFU,Standard,Standard,Standard,5mC,NA,Rep2,10,NA
 MF3.RFU,Standard,Standard,Standard,5mC,NA,Rep3,12,NA
